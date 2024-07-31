@@ -3,7 +3,7 @@
 export const links = {
     "Home": "/",
     "Resources": "/resources",
-    "Clubs": "/clubs",
+    "Extracurriculars": "/extracurriculars",
     "Announcements": "/announcements",
     "Contact": "/contact"
 }
