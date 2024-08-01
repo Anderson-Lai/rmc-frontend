@@ -15,7 +15,7 @@ export default function Layout( { children } : Props ) {
             <header className="text-text-light-green flex justify-between px-4 py-3 my-5">
                 <Logo logo={logo} />
 
-                <nav className="flex flex-wrap">
+                <nav className="grid md:grid-cols-2 lg:flex">
                     {
                         Object.keys(links).map((key, index) => {
                             return (
