@@ -31,28 +31,20 @@ export default function Home() {
                 </button>
             </div>
 
-            <div className="mt-14 lg:mx-24 lg:block flex flex-col items-center">
+            <div className="mt-14 lg:mx-48 lg:block flex flex-col items-center">
                 <h3 className="font-semibold text-3xl mb-8">About Us</h3>
+
                 <div className="grid grid-cols-1 lg:grid-cols-3">
                     <div className="flex justify-center lg:justify-start">
                         <Card image={cardData.purpose.image} title="Our Purpose" body={cardData.purpose.body} />
                     </div>
-                    <div className="flex justify-center lg:justify-start">
-                        <Card image={cardData.announcements.image} title="Daily Announcements" body={cardData.announcements.body} />
-                    </div>
-                    <div className="flex justify-center lg:justify-start">
-                        <Card image={cardData.announcements.image} title="Daily Announcements" body={cardData.announcements.body} />
-                    </div>
-                </div>
-
-                {/* <div className="grid grid-cols-1 lg:grid-cols-2">
                     <div className="flex justify-center lg:justify-center">
                         <Card image={cardData.goals.image} title="Our Goals" body={cardData.goals.body} />
                     </div>
-                    <div className="flex justify-center lg:justify-center">
-                        <Card image={cardData.music.image} title="Morning Music" body={cardData.music.body} />
+                    <div className="flex justify-center lg:justify-end">
+                        <Card image={cardData.announcements.image} title="Daily Announcements" body={cardData.announcements.body} />
                     </div>
-                </div> */}
+                </div>
             </div>
             
             <div className="mt-28 mb-64 flex flex-col items-center">
