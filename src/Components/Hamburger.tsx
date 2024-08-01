@@ -1,18 +1,18 @@
 import { useRef } from "react";
 
 
-type Props = {
-    links: object,
-}
+// type Props = {
+//     links: object,
+// }
+// { links } : Props 
 
-export default function Hamburger( { links } : Props ) {
+export default function Hamburger() {
 
     const menu = useRef<HTMLDivElement | null>(null);
 
     function displayMenu() {
         menu.current?.classList.toggle("hidden");
     }
-   
 
     return (
         <div className="sm:min-w-96 md:min-w-32 mx-2 flex flex-col items-center">

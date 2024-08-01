@@ -32,7 +32,8 @@ export default function Layout( { children } : Props ) {
                 </nav>
 
                 {/* <Logo logo={logo} invisible={true} /> */}
-                <Hamburger links={[]} />    
+                 {/* links={[]}  */}
+                <Hamburger />    
             </header>
             <main className="text-white">
                 {children}
