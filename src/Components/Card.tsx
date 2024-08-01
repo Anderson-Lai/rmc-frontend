@@ -4,12 +4,20 @@ type Props = {
     image: string,
     title: string,
     body: string,
+    link?: string,
 }
 
-export default function Card( { image, title, body} : Props ) {
+export default function Card( { image, title, body, link } : Props ) {
+
+    function handleClick() {
+        if (link != null && link != undefined && link != "") {
+            window.open(link, "_blank", "noopener,noreferrer");
+        }
+    }
+
     return (
         <div className="border-2 border-border-light-yellow hover:shadow-small-white flex flex-col px-7 pt-3 pb-8
-            my-4 rounded-xl hover:-translate-y-2 duration-150 delay-100" style={{width: "80%"}}>
+            my-4 rounded-xl hover:-translate-y-2 duration-150 delay-100" style={{width: "80%"}} onClick={handleClick}>
             <div className="flex justify-end mx-4">
                 <img src={image} className="max-w-24" alt="image" />
             </div>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { links } from "../Data/LayoutData";
 import logo from '../assets/logo.png'
 import Logo from "../Components/Logo";
+import Hamburger from "./Hamburger";
 
 type Props = {
     children: ReactElement
@@ -30,7 +31,8 @@ export default function Layout( { children } : Props ) {
                     }
                 </nav>
 
-                <Logo logo={logo} invisible={true} />
+                {/* <Logo logo={logo} invisible={true} /> */}
+                <Hamburger links={[]} />    
             </header>
             <main className="text-white">
                 {children}

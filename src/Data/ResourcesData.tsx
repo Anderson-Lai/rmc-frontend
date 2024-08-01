@@ -7,18 +7,22 @@ export const generalData = {
     edsembli: {
         image: logo,
         body: filler,
+        link: "",
     },
     blueprint: {
         image: logo,
         body: filler,
+        link: "",
     },
     d2l: {
         image: logo,
         body: filler,
+        link: "",
     },
     strWebsite: {
         image: logo,
         body: filler,
+        link: "",
     },
 }
 
@@ -26,21 +30,26 @@ export const guidanceData = {
     appointment: {
         image: logo,
         body: filler,
+        link: "",
     },
     courseChange: {
         image: logo,
         body: filler,
+        link: "",
     },
     guidanceWebsite: {
         image: logo,
         body: filler,
+        link: "",
     },
     shsm: {
         image: logo,
         body: filler,
+        link: "",
     },
     tutoring: {
         image: logo,
         body: filler,
+        link: "",
     },
 }
