@@ -8,9 +8,9 @@ export default function Resources() {
         <>
             <PageTitle title="RESOURCES" />
 
-            <div className="mt-14 lg:mx-24 lg:block flex flex-col items-center">
+            <div className="mt-14 mx-5 lg:mx-24 lg:block flex flex-col items-center">
                 <h3 className="font-semibold text-3xl mb-8">General Resources</h3>
-                <div className="grid grid-cols-1 lg:grid-cols-2">
+                <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-7">
                     <div className="flex justify-center lg:justify-start">
                         <Card image={generalData.edsembli.image} title="Edsembli" body={generalData.edsembli.body}
                         link={generalData.edsembli.link} />
@@ -21,7 +21,7 @@ export default function Resources() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2">
+                <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-7">
                     <div className="flex justify-center lg:justify-start">
                         <Card image={generalData.blueprint.image} title="My Blueprint" body={generalData.blueprint.body}
                         link={generalData.blueprint.link} />
@@ -33,9 +33,10 @@ export default function Resources() {
                 </div>
             </div>
 
-            <div className="mt-14 lg:mx-24 lg:block flex flex-col items-center">
+            <div className="mt-14 mx-5 lg:mx-24 lg:block flex flex-col items-center">
                 <h3 className="font-semibold text-3xl mb-8">Guidance Resources</h3>
-                <div className="grid grid-cols-1 lg:grid-cols-3">
+
+                <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-x-7">
                     <div className="flex justify-center lg:justify-start">
                         <Card image={guidanceData.appointment.image} title="Book an appointment" body={guidanceData.appointment.body}
                         link={guidanceData.appointment.link} />
@@ -50,7 +51,7 @@ export default function Resources() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2">
+                <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-7">
                     <div className="flex justify-center">
                         <Card image={guidanceData.shsm.image} title="SHSM" body={guidanceData.shsm.body}
                         link={guidanceData.shsm.link} />

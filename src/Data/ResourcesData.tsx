@@ -7,22 +7,22 @@ export const generalData = {
     edsembli: {
         image: logo,
         body: filler,
-        link: "",
+        link: "https://connect.edsembli.com/ON/YCDSB/SRH/Portal/viewer/login/login.aspx?LoginType=S",
     },
     blueprint: {
         image: logo,
         body: filler,
-        link: "",
+        link: "https://app.myblueprint.ca/",
     },
     d2l: {
         image: logo,
         body: filler,
-        link: "",
+        link: "https://ycdsb.elearningontario.ca/d2l/home",
     },
     strWebsite: {
         image: logo,
         body: filler,
-        link: "",
+        link: "https://stro.ycdsb.ca/",
     },
 }
 

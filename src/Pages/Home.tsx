@@ -31,7 +31,7 @@ export default function Home() {
                 </button>
             </div>
 
-            <div className="mt-14 lg:mx-20 lg:block flex flex-col items-center">
+            <div className="mt-14 mx-5 lg:mx-20 lg:block flex flex-col items-center">
                 <h3 className="font-semibold text-3xl mb-8">About Us</h3>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-x-7">

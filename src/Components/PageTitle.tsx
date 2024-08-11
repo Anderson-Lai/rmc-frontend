@@ -5,5 +5,5 @@ type Props = {
 }
 
 export default function PageTitle(  { title } : Props ) {
-    return <h1 className="font-bold text-5xl text-center">{title}</h1>
+    return <h1 className="font-bold text-5xl text-center">{title.toUpperCase()}</h1>
 }
