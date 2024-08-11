@@ -1,7 +1,10 @@
+import PageTitle from "../Components/PageTitle";
 
 
 export default function Extracurriculars() {
     return (
-        <>Clubs</>
+        <>
+            <PageTitle title="EXTRACURRICULARS" />  
+        </>
     );
 }

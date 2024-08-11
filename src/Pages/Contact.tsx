@@ -1,7 +1,10 @@
+import PageTitle from "../Components/PageTitle";
 
 
 export default function Contact() {
     return (
-        <>Contact</>
+        <>
+            <PageTitle title="CONTACT US" />
+        </>
     );
 }

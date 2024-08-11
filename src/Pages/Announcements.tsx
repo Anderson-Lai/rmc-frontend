@@ -1,7 +1,10 @@
+import PageTitle from "../Components/PageTitle";
 
 
 export default function Announcements() {
     return (
-        <>Announcements</>
+        <>
+            <PageTitle title="ANNOUNCEMENTS" />
+        </>
     );
 }
