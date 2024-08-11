@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Card from "../Components/Card";
 import { cardData, iosLink, googleLink, appDescription } from "../Data/HomeData";
-
+import { v4 } from "uuid";
 
 export default function Home() {
 
@@ -35,15 +35,15 @@ export default function Home() {
                 <h3 className="font-semibold text-3xl mb-8">About Us</h3>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-x-7">
-                    <div className="flex justify-center lg:justify-start">
-                        <Card image={cardData.purpose.image} title="Our Purpose" body={cardData.purpose.body} />
-                    </div>
-                    <div className="flex justify-center lg:justify-center">
-                        <Card image={cardData.goals.image} title="Our Goals" body={cardData.goals.body} />
-                    </div>
-                    <div className="flex justify-center lg:justify-end">
-                        <Card image={cardData.announcements.image} title="Daily Announcements" body={cardData.announcements.body} />
-                    </div>
+                    {
+                        Object.keys(cardData).map(k => {
+                            const key = k as keyof typeof cardData;
+                            return (
+                                <Card image={cardData[key].image} title={cardData[key].title} 
+                                body={cardData[key].body} key={v4()} />
+                            );
+                        })
+                    }
                 </div>
             </div>
             

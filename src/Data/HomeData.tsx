@@ -5,21 +5,20 @@ const filler = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta 
 
 export const cardData = {
     purpose: {
+        title: "Our Purpose",
         image: logo,
         body: filler,
     },
     goals: {
+        title: "Our Goals",
         image: logo,
         body: filler,
     },
     announcements: {
+        title: "Daily Announcements",
         image: logo,
         body: filler,
-    },
-    music: {
-        image: logo,
-        body: filler,
-    },
+    }
 }
 
 export const iosLink = "https://apps.apple.com/ca/app/st-robert-chs/id1568654037";

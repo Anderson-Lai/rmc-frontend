@@ -5,21 +5,25 @@ const filler = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Offici
 
 export const generalData = {
     edsembli: {
+        title: "Edsembli",
         image: logo,
         body: filler,
         link: "https://connect.edsembli.com/ON/YCDSB/SRH/Portal/viewer/login/login.aspx?LoginType=S",
     },
-    blueprint: {
-        image: logo,
-        body: filler,
-        link: "https://app.myblueprint.ca/",
-    },
     d2l: {
+        title: "D2L",
         image: logo,
         body: filler,
         link: "https://ycdsb.elearningontario.ca/d2l/home",
     },
+    blueprint: {
+        title: "My Blueprint",
+        image: logo,
+        body: filler,
+        link: "https://app.myblueprint.ca/",
+    },
     strWebsite: {
+        title: "St. Robert website",
         image: logo,
         body: filler,
         link: "https://stro.ycdsb.ca/",
@@ -28,26 +32,31 @@ export const generalData = {
 
 export const guidanceData = {
     appointment: {
+        title: "Book an appointment",
         image: logo,
         body: filler,
         link: "",
     },
     courseChange: {
+        title: "Course changes",
         image: logo,
         body: filler,
         link: "",
     },
     guidanceWebsite: {
+        title: "Guidance website",
         image: logo,
         body: filler,
         link: "",
     },
     shsm: {
+        title: "SHSM",
         image: logo,
         body: filler,
         link: "",
     },
     tutoring: {
+        title: "Tutoring",
         image: logo,
         body: filler,
         link: "",
