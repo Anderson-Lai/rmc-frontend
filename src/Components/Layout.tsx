@@ -13,10 +13,10 @@ type Props = {
 export default function Layout( { children } : Props ) {
     return (
         <div className="min-h-screen flex flex-col from-bg-dark-green to-bg-black bg-gradient-to-t">
-            <header className="text-text-light-green flex justify-between px-4 py-3 my-5">
+            <header className="text-text-light-green flex justify-between items-start px-4 py-3 my-5">
                 <Logo logo={logo} />
 
-                <nav className="grid md:grid-cols-2 lg:flex">
+                <nav className="grid invisible lg:visible md:grid-cols-2 lg:flex">
                     {
                         Object.keys(links).map((key, index) => {
                             return (
@@ -31,9 +31,7 @@ export default function Layout( { children } : Props ) {
                     }
                 </nav>
 
-                {/* <Logo logo={logo} invisible={true} /> */}
-                 {/* links={[]}  */}
-                <Hamburger />    
+                <Hamburger links={links} />    
             </header>
             <main className="text-white">
                 {children}
