@@ -25,8 +25,7 @@ export default function Hamburger( { links } : Props ) {
                 initial={{ x: '100vw' }}
                 animate={{ x: render ? 0 : '100vw' }} 
                 transition={{ delay: 0, duration: 0.3, ease: "easeOut" }}
-                className="invisible fixed top-0 right-0 w-[325px] h-screen bg-black
-                px-0 py-10"
+                className="invisible fixed top-0 right-0 w-[325px] h-screen bg-bg-black py-10"
             >
                 <div className="w-full flex justify-end">
                     <img src={x} onClick={toggleMenu} className="mx-7" />
