@@ -16,7 +16,7 @@ export default function ContactCard( { name, value, Icon, delay } : Props ) {
         await window.navigator.clipboard.writeText(value);
         button.current!.textContent = "Copied!";
     }
-    function handleMosueOut() {
+    function handleMouseOut() {
         button.current!.textContent = "Copy";
     }
 
@@ -36,7 +36,7 @@ export default function ContactCard( { name, value, Icon, delay } : Props ) {
             <button 
                 ref={button} 
                 onClick={handleClick}
-                onMouseOut={handleMosueOut}
+                onMouseOut={handleMouseOut}
                 className="text-xl bg-bg-dark-green rounded-full p-3 py-1 mt-1 mb-2"
             >
                 Copy
