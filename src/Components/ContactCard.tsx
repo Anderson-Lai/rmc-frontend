@@ -27,8 +27,10 @@ export default function ContactCard( { name, value, Icon, delay } : Props ) {
             transition={{ delay: delay, duration: 0.75, ease: "backOut" }}
             className="border-border-light-yellow border-2 rounded-lg flex flex-col items-center w-full py-1 px-4 mb-5"
         >
-            <h4 className="text-2xl font-semibold flex justify-center items-center">Contact us {name}!
-                <Icon size={25} className="ml-5" /></h4>
+            <div className="text-xl md:text-2xl font-semibold flex justify-center items-center">
+                <h4 className="whitespace-nowrap">Contact us {name}!</h4>
+                <Icon size={25} className="ml-5" />
+            </div>
 
             <p className="text-center text-lg mt-2">{value}</p>
             <button 
