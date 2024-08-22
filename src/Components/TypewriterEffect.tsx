@@ -26,8 +26,13 @@ export default function TypewriterEffect({ message, className, characterDelay = 
     }, [index, visible, text]);
 
     return (
-        <div className={className} ref={ref}>
-            &nbsp;{text}&nbsp;
-        </div>
+        text == "" ?
+            <div className={className} ref={ref}>
+                &nbsp;
+            </div>
+        :
+            <div className={className} ref={ref}>
+                {text}
+            </div>
     );
 }

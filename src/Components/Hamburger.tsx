@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import x from '../assets/x-img.svg'
+import { v4 } from "uuid";
 
 type Props = {
     links: object,
@@ -19,32 +20,32 @@ export default function Hamburger( { links } : Props ) {
     }
 
     return (
-        <div className="sm:min-w-96 md:min-w-32 mx-2 flex justify-center">
+        <div className="mx-2">
             {/* slide in */}
             <motion.div ref={menu}
-                initial={{ x: '100vw' }}
-                animate={{ x: render ? 0 : '100vw' }} 
+                initial={{ x: '325px' }}
+                animate={{ x: render ? 0 : '325px' }} 
                 transition={{ delay: 0, duration: 0.3, ease: "easeOut" }}
                 className="invisible fixed top-0 right-0 w-[325px] h-screen bg-bg-black py-10"
             >
                 <div className="w-full flex justify-end">
                     <img src={x} onClick={toggleMenu} className="mx-7" />
                 </div>
-                {
-                    Object.keys(links).map((key, index) => {
-                            return (
-                                <>
-                                <div className="m-2 text-xl duration-150 hover:bg-indigo-900
-                                    hover:rounded-lg font-semibold py-1" style={{height: "fit-content"}} key={index}>
-                                    <Link to={links[key as keyof typeof links]} className="px-3 pb-2">
-                                        {key}
+                <div className="flex flex-col">
+                    {
+                        Object.keys(links).map((key) => {
+                                return (
+                                    <Link to={links[key as keyof typeof links]} 
+                                        className="my-1 mx-2 duration-150 px-3 p-2 hover:bg-indigo-900 hover:rounded-lg font-semibold" 
+                                        key={v4()}
+                                        onClick={toggleMenu}
+                                    >
+                                            {key}
                                     </Link>
-                                </div>
-                                </>
-                                
-                            );
-                        })
-                }
+                                );
+                            })
+                    }
+                </div>
             </motion.div>
 
             {/* hamburger menu */}

@@ -23,7 +23,7 @@ export default function Home() {
     return (
         <>
             <div className="md:mt-12 lg:mt-20 flex flex-col items-center text-center">
-                <TypewriterEffect className="text-8xl lg:text-9xl font-bold" message="RAMS MEDIA" characterDelay={75} />
+                <TypewriterEffect className="text-8xl lg:text-9xl font-bold text-center" message="RAMS MEDIA" characterDelay={75} />
                 <h4 className="font-semibold mt-10">Rising Artists Marketing and Storytelling</h4>
 
                 <button className="mt-12 text-2xl rounded-xl border border-border-light-yellow px-3 py-2

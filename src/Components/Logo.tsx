@@ -8,11 +8,11 @@ type Props = {
 export default function Logo( { logo, invisible } : Props ) {
     return (
         invisible ?
-            <div className="sm:max-w-96 md:max-w-32 mx-2 flex justify-center items-start -translate-y-1 md:-translate-y-10 invisible" >
+            <div className="max-w-10 md:w-14 lg:w-32 mx-2 flex justify-center items-start invisible" >
                 <img src={logo} alt="logo" />
             </div>
         :
-            <div className="sm:max-w-96 md:max-w-32 mx-2 flex justify-center items-start -translate-y-1 md:-translate-y-10" >
+            <div className="max-w-10 md:w-14 lg:w-32 mx-2 flex justify-center items-start" >
                 <img src={logo} alt="logo" />
             </div>
     );
