@@ -7,25 +7,25 @@ export const generalData = {
     edsembli: {
         title: "Edsembli",
         image: logo,
-        body: filler,
+        body: "Access the Student Portal to check your grades, view schedules, and more",
         link: "https://connect.edsembli.com/ON/YCDSB/SRH/Portal/viewer/login/login.aspx?LoginType=S",
     },
     d2l: {
         title: "D2L",
         image: logo,
-        body: filler,
+        body: "Log in to D2L for assignments, class updates, and more",
         link: "https://ycdsb.elearningontario.ca/d2l/home",
     },
     blueprint: {
         title: "My Blueprint",
         image: logo,
-        body: filler,
+        body: "Explore the education and career planning website for student portfolios.",
         link: "https://app.myblueprint.ca/",
     },
     strWebsite: {
         title: "St. Robert website",
         image: logo,
-        body: filler,
+        body: "Visit the main St Robert website for the latest news, events, and resources for students and parents.",
         link: "https://stro.ycdsb.ca/",
     },
 }
@@ -34,13 +34,13 @@ export const guidanceData = {
     appointment: {
         title: "Book an appointment",
         image: logo,
-        body: filler,
+        body: "Schedule an appointment with your guidance counselor ",
         link: "https://sites.google.com/ycdsb.ca/guidancewebsite/appointments?authuser=0",
     },
     courseChange: {
         title: "Course changes",
         image: logo,
-        body: filler,
+        body: "Request a course change through our online portal",
         link: "https://sites.google.com/ycdsb.ca/guidancewebsite/course-changes?authuser=0",
     },
     guidanceWebsite: {
@@ -58,7 +58,7 @@ export const guidanceData = {
     tutoring: {
         title: "Tutoring",
         image: logo,
-        body: filler,
+        body: "Interested in volunteering as an after-school tutor? Sign up here to get involved",
         link: "https://sites.google.com/ycdsb.ca/guidancewebsite/tutoring?authuser=0",
     },
 }

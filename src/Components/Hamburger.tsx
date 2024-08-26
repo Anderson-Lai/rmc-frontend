@@ -16,7 +16,6 @@ export default function Hamburger( { links } : Props ) {
 
     function toggleMenu() {
         setRender(curr => !curr);
-        menu.current?.classList.toggle("invisible");
     }
 
     return (
@@ -26,9 +25,9 @@ export default function Hamburger( { links } : Props ) {
                 initial={{ x: '325px' }}
                 animate={{ x: render ? 0 : '325px' }} 
                 transition={{ delay: 0, duration: 0.3, ease: "easeOut" }}
-                className="invisible fixed top-0 right-0 w-[325px] h-screen bg-bg-black py-10"
+                className="fixed top-0 right-0 w-[325px] h-screen bg-bg-black py-10"
             >
-                <div className="w-full flex justify-end">
+                <div className="w-full flex justify-end cursor-pointer">
                     <img src={x} onClick={toggleMenu} className="mx-7" />
                 </div>
                 <div className="flex flex-col">
