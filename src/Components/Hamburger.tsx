@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import x from '../assets/x-img.svg'
 import { v4 } from "uuid";
+import { clubs, councils } from "../Data/ExtracurricularData";
+import { resetValues } from "../Pages/Extracurriculars";
 
 type Props = {
     links: object,
@@ -16,6 +18,8 @@ export default function Hamburger( { links } : Props ) {
 
     function toggleMenu() {
         setRender(curr => !curr);
+        resetValues(clubs);
+        resetValues(councils);
     }
 
     return (
@@ -35,7 +39,8 @@ export default function Hamburger( { links } : Props ) {
                         Object.keys(links).map((key) => {
                                 return (
                                     <Link to={links[key as keyof typeof links]} 
-                                        className="my-1 mx-2 duration-150 px-3 p-2 hover:bg-indigo-900 hover:rounded-lg font-semibold" 
+                                        className="my-1 mx-2 duration-150 px-3 p-2 hover:bg-indigo-900 
+                                        hover:rounded-lg font-semibold" 
                                         key={v4()}
                                         onClick={toggleMenu}
                                     >

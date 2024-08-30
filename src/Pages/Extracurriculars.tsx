@@ -30,7 +30,7 @@ function cleanString(string: string) {
             cleaned += string[i];
         }
     }
-    return cleaned;
+    return cleaned.trim();
 }
 
 function ecToString(ec: Extracurricular) {
@@ -53,9 +53,14 @@ function ecToString(ec: Extracurricular) {
 
     result += welcomingNewMembers ? "Yes" : "No";
 
-    return result;
+    return result.trim();
 }
 
+export function resetValues(ecs: Extracurricular[]) {
+    for (let i = 0; i < ecs.length; i++) {
+        ecs[i].value = 1;
+    }
+}
 
 export default function Extracurriculars() {
     const [search, setSearch] = useState<string>("");
@@ -68,9 +73,7 @@ export default function Extracurriculars() {
 
     function setValue(ecs: Extracurricular[]) {
         if (search === null || search === "") {
-            for (let i = 0; i < ecs.length; i++) {
-                ecs[i].value = 1;
-            }
+            resetValues(ecs);
             return;
         }
 
