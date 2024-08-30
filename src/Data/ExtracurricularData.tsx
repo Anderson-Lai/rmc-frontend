@@ -17,7 +17,6 @@ export const clubs: Extracurricular[] = [
         name: "AXIOM Newspaper",
         frequency: "Tuesday biweekly",
         value: 1,
-        biography: "testing 123 abc",
         location: "Room 223",
         teacherAdvisors: ["Mr. Wood"],
         contactInformation: ["Instagram: @theaxiomnewspaper", "Website: theaxiom.ca"],
@@ -29,14 +28,14 @@ export const clubs: Extracurricular[] = [
         value: 1,
         location: "Rooms 111 and 133",
         teacherAdvisors: ["B. Facchini", "A. DeGirolamo"],
-        welcomingNewMembers: true
+        welcomingNewMembers: false
     },
     {
         name: "Board Games Club",
         frequency: "Friday weekly",
         value: 1,
         teacherAdvisors: ["J. Buckley"],
-        welcomingNewMembers: true
+        welcomingNewMembers: false
     },
     {
         name: "Chaplaincy Choir",
@@ -52,7 +51,7 @@ export const clubs: Extracurricular[] = [
         value: 1,
         location: "Room 141",
         teacherAdvisors: ["J. Liu"],
-        welcomingNewMembers: true
+        welcomingNewMembers: false
     },
     {
         name: "Concert Choir",
@@ -61,6 +60,15 @@ export const clubs: Extracurricular[] = [
         location: "Room 111",
         teacherAdvisors: ["B. Facchini"],
         welcomingNewMembers: true
+    },
+    {
+        name: "Coding Club",
+        frequency: "Friday weekly",
+        value: 1,
+        location: "Rooms 119 and 120",
+        teacherAdvisors: ["V. Odhutan"],
+        contactInformation: ["Instagram: @strcodingclub"],
+        // welcomingNewMembers: true
     }
 ].sort((first, second) => first.name.localeCompare(second.name));
 

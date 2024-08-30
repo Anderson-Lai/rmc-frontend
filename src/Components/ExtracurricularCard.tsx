@@ -15,14 +15,6 @@ export default function ExtracurricularCard( { name, frequency, biography, locat
             </div>
 
             {
-                contactInformation &&
-                <div className="my-2">
-                    <h4 className="text-xl font-semibold">Contact Information:</h4>
-                    <p className="text-lg italic">{contactInformation?.join(" | ")}</p>
-                </div>
-            }
-
-            {
                 biography && 
                 <div className="my-2">
                     <h4 className="text-xl font-semibold">Biography:</h4>
@@ -47,6 +39,14 @@ export default function ExtracurricularCard( { name, frequency, biography, locat
             }
 
             {
+                contactInformation &&
+                <div className="my-2">
+                    <h4 className="text-xl font-semibold">Contact Information:</h4>
+                    <p className="text-lg italic">{contactInformation?.join(" | ")}</p>
+                </div>
+            }
+
+            {
                 location && 
                 <div className="my-2">
                     <h4 className="text-xl font-semibold">Location:</h4>
@@ -54,10 +54,14 @@ export default function ExtracurricularCard( { name, frequency, biography, locat
                 </div>
             }
 
-            <div className="my-2">
-                <h4 className="text-xl font-semibold">Welcoming New Members?</h4>
-                <p className="text-lg">{welcomingNewMembers ? "Yes" : "No"}</p>
-            </div>
+            {
+                welcomingNewMembers !== null && 
+                <div className="my-2">
+                    <h4 className="text-xl font-semibold">Welcoming New Members?</h4>
+                    <p className="text-lg">{welcomingNewMembers ? "Yes" : "No"}</p>
+                </div>
+            }
+
         </div>
     );
 }
