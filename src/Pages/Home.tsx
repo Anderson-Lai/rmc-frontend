@@ -27,7 +27,7 @@ export default function Home() {
                 <h4 className="font-semibold mt-10">Rising Artists Marketing and Storytelling</h4>
 
                 <button className="mt-12 text-2xl rounded-xl border border-border-light-yellow px-3 py-2
-                 hover:-translate-y-1 duration-200 delay-100 hover:scale-105 hover:shadow-white">
+                 hover:-translate-y-2 duration-150 delay-75 hover:scale-105 hover:shadow-small-white">
                     <Link to="/contact">Contact Us</Link>
                 </button>
             </div>
