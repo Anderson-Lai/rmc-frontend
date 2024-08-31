@@ -7,7 +7,7 @@ export default function ExtracurricularCard( { name, frequency, biography, locat
     return (
         <div className="border border-border-light-yellow rounded-lg
             flex flex-col px-4 py-2 flex-wrap w-full h-full font-title-family">
-            <h3 className="text-3xl mb-2 font-semibold">{name}</h3>
+            <h3 className="text-3xl mb-5 font-semibold">{name}</h3>
 
             <div className="my-2">
                 <h4 className="text-xl font-semibold">Meeting Date:</h4>
@@ -17,7 +17,7 @@ export default function ExtracurricularCard( { name, frequency, biography, locat
             {
                 biography && 
                 <div className="my-2">
-                    <h4 className="text-xl font-semibold">Biography:</h4>
+                    <h4 className="text-xl font-semibold">Bio:</h4>
                     <p className="text-lg">{biography}</p>
                 </div>
             }
@@ -61,7 +61,6 @@ export default function ExtracurricularCard( { name, frequency, biography, locat
                     <p className="text-lg">{welcomingNewMembers ? "Yes" : "No"}</p>
                 </div>
             }
-
         </div>
     );
 }
