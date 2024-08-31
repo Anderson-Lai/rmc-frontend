@@ -334,7 +334,7 @@ export const clubs: Extracurricular[] = [
         name: "STR Announcements",
         frequency: "N/A",
         value: 1,
-        biography: "Interested in being the voice of our school? Want to help hand-pick the songs that play over the morning PA? If so, then apply to join our team of talented and enthusiastic readers! Together, we’ll elevate your mornings with energizing voices and upbeat tunes! Follow us on Instagram as we bring you the latest announcements at STR!",
+        biography: "Interested in being the voice of our school? Want to help hand-pick the songs that play over the morning PA? If so, then apply to join our team of talented and enthusiastic readers! Together, we'll elevate your mornings with energizing voices and upbeat tunes! Follow us on Instagram as we bring you the latest announcements at STR!",
         teacherAdvisors: ["S. Barclay", "K. Dela Cruz"],
         contactInformation: ["IG: @strannouncements"],
         welcomingNewMembers: true
@@ -343,13 +343,73 @@ export const clubs: Extracurricular[] = [
 
 export const councils: Extracurricular[] = [
     {
-        name: "AXIOM Newspaper",
-        frequency: "Tuesday biweekly",
+        name: "Arts Council",
+        frequency: "Monday weekly from 2:30 to 3:30",
         value: 1,
-        biography: "testing 123 abc",
-        location: "Room 223",
-        teacherAdvisors: ["Mr. Wood"],
-        contactInformation: ["Instagram: @theaxiomnewspaper", "Website: theaxiom.ca"],
+        biography: "To promote the Arts and offer opportunities for students to participate in activities involving art, drama and music.",
+        teacherAdvisors: ["B. Facchini", "M. Boon"],
+        contactInformation: ["IG: @strobs.arts"],
         welcomingNewMembers: true
     },
+    {
+        name: "Chaplaincy Council",
+        frequency: "Monday weekly from 2:30 to 3:30",
+        value: 1,
+        biography: "Supporting the needs of our school community through faith.",
+        teacherAdvisors: ["P. Karisch"],
+        contactInformation: ["IG: @strchaplaincy"],
+        welcomingNewMembers: true
+    },
+    {
+        name: "Environmental Council",
+        frequency: "Monday weekly from 2:30 to 3:30",
+        value: 1,
+        biography: "To promote environmental stewardship in the school community.",
+        teacherAdvisors: ["C. Ciobanu"],
+        contactInformation: ["IG: @STREnvirocouncil", "TikTok: Strobertenviro"],
+        welcomingNewMembers: true
+    },
+    {
+        name: "French Council",
+        frequency: "Monday weekly from 2:30 to 3:30",
+        value: 1,
+        biography: "To promote and encourage the French language in a bilingual setting.",
+        teacherAdvisors: ["N. Torresan"],
+        contactInformation: ["IG: @strfrenchcouncil", "Twitter/X: @strobertfrench"],
+        welcomingNewMembers: true
+    },
+    {
+        name: "SAC (Student Athletic Council)",
+        frequency: "Monday weekly from 2:30 to 3:30",
+        value: 1,
+        biography: "Promote physical activity and school spirit through participation in sport.",
+        teacherAdvisors: ["M. Elacqua"],
+        contactInformation: ["IG: @strobertsac", "Twitter/X: @StrobsSAC"],
+        welcomingNewMembers: true
+    },
+    {
+        name: "Social Justice Council",
+        frequency: "Monday weekly from 2:30 to 3:30",
+        value: 1,
+        biography: "To promote both awareness, teachings and actions within Social Justice (Includes teaching that are Scripture based and a calling to all.).",
+        teacherAdvisors: ["C. Roccari"],
+        contactInformation: ["IG: @str.socialjustice"],
+        welcomingNewMembers: true
+    },
+    {
+        name: "STEAM Council",
+        frequency: "Monday weekly from 2:30 to 3:30",
+        value: 1,
+        biography: "To engage students in STEAM activities.",
+        contactInformation: ["IG: @strstemcouncil"],
+        welcomingNewMembers: true
+    },
+    {
+        name: "STUCO",
+        frequency: "Monday weekly from 2:30 to 3:30",
+        value: 1,
+        biography: "Student body government providing opportunities to build community.",
+        contactInformation: ["IG: @StRobsStuco", "Twitter/X: @StRobsStuco"],
+        welcomingNewMembers: true
+    }
 ].sort((first, second) => first.name.localeCompare(second.name));
