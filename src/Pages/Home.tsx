@@ -14,9 +14,9 @@ export default function Home() {
         const ios = isIos();
         
         if (ios) {
-            window.location.href = iosLink
+            window.open(iosLink, "_blank", "noreferrer,noopener");
         } else {
-            window.location.href = googleLink
+            window.open(googleLink, "_blank", "noreferrer,noopener");
         }
     }
 
@@ -27,7 +27,7 @@ export default function Home() {
                 <h4 className="font-semibold mt-10">Rising Artists Marketing and Storytelling</h4>
 
                 <button className="mt-12 text-2xl rounded-xl border-2 border-border-light-yellow px-3 py-2
-                 hover:-translate-y-2 duration-150 delay-75 hover:shadow-small-white">
+                 hover:-translate-y-2 duration-150 delay-75 hover:shadow-button-white">
                     <Link to="/contact">Contact Us</Link>
                 </button>
             </div>
@@ -52,8 +52,8 @@ export default function Home() {
                 <h2 className="font-bold text-center text-3xl">St. Robert CHS</h2>
                 <p className="text-center my-9" style={{maxWidth: "50%"}}>{appDescription}</p>
 
-                <button className="mt-4 text-2xl rounded-xl border border-border-light-yellow px-3 py-2
-                 hover:-translate-y-2 duration-150 delay-75 hover:shadow-small-white"
+                <button className="mt-4 text-2xl rounded-xl border-2 border-border-light-yellow px-3 py-2
+                 hover:-translate-y-2 duration-150 delay-75 hover:shadow-button-white"
                  onClick={handleDownload}>
                     Download the App
                 </button>
