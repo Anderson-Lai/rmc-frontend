@@ -51,7 +51,7 @@ export const clubs: Extracurricular[] = [
         welcomingNewMembers: true
     },
     {
-        name: "Chinese Cultural heritage Club",
+        name: "Chinese Cultural Heritage Club",
         frequency: "Tuesday weekly",
         value: 1,
         biography: "Join St Rob's very own Chinese Cultural Heritage Club as we appreciate China's heritage and unique culture!",
