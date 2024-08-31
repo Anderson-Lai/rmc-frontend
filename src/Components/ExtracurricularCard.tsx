@@ -6,7 +6,9 @@ export default function ExtracurricularCard( { name, frequency, biography, locat
 
     return (
         <div className="border border-border-light-yellow rounded-lg
-            flex flex-col px-4 py-2 flex-wrap w-full h-full font-title-family">
+            flex flex-col px-4 py-2 flex-wrap w-full h-full font-title-family
+            hover:shadow-small-white hover:-translate-y-2 duration-150 delay-75"
+            >
             <h3 className="text-3xl mb-5 font-semibold">{name}</h3>
 
             <div className="my-2">
