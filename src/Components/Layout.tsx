@@ -25,8 +25,7 @@ export default function Layout( { children } : Props ) {
                             Object.keys(links).map((key) => {
                                 return (
                                     <div className="mx-4 my-2 text-xl duration-150 hover:bg-indigo-900 
-                                        hover:scale-105 hover:-translate-y-2
-                                        hover:rounded-lg font-semibold py-1 h-fit" key={v4()}
+                                        rounded-lg font-semibold py-1 h-fit" key={v4()}
                                         >
                                         <Link to={links[key as keyof typeof links]} className="px-3 pb-2">
                                             {key}
