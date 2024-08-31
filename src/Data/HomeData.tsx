@@ -6,12 +6,12 @@ export const cardData = {
     purpose: {
         title: "Our Purpose",
         image: purpose,
-        body: "The Rams Media Club's purpose is to amplify student voices in the school community through their creative passions and talents",
+        body: "The Rams Media Club's purpose is to amplify student voices in the school community through their creative passions and talents.",
     },
     goals: {
-        title: "Our Goals",
+        title: "Our Plans",
         image: goals,
-        body: "Our club focuses on building a community of creators in VFX, photography, and videography, competing in film competitions, and making videos for the school",
+        body: "Our club focuses on building a community of creators in VFX, photography, and videography, competing in film competitions, and making videos for the school.",
     },
     announcements: {
         title: "Daily Announcements",
