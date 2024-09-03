@@ -57,7 +57,7 @@ export default function Hamburger( { links } : Props ) {
                             Object.keys(links).map((key) => {
                                     return (
                                         <Link to={links[key as keyof typeof links]} 
-                                            className="my-1 mx-2 duration-150 px-3 p-2 hover:bg-indigo-900 
+                                            className="my-1 mx-2 duration-150 px-3 py-2 hover:bg-indigo-900 
                                             hover:rounded-lg font-semibold" 
                                             key={v4()}
                                             onClick={toggleMenu}

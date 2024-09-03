@@ -24,16 +24,15 @@ export default function Layout( { children } : Props ) {
                         {
                             Object.keys(links).map((key) => {
                                 return (
-                                    <div className="mx-4 my-2 text-xl duration-150 hover:bg-indigo-900 
-                                        rounded-lg font-semibold py-1 h-fit" key={v4()}
-                                        >
-                                        <Link to={links[key as keyof typeof links]} className="px-3 pb-2">
-                                            {key}
-                                        </Link>
-                                    </div>
+                                    <Link to={links[key as keyof typeof links]} className="px-3 py-1
+                                    mx-4 my-2 text-xl duration-150 hover:bg-indigo-900 
+                                    rounded-lg font-semibold h-fit" key={v4()}>
+                                        {key}
+                                    </Link>
                                 );
                             })
                         }
+                        
                     </nav>
 
                     <div className="sm:min-w-96 md:min-w-32 flex justify-center items-center">
