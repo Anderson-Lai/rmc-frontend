@@ -17,7 +17,9 @@ export default function AnnouncementCard( { title, link, embed} : Props ) {
     }
 
     function handleMouseOut() {
-        button.current!.textContent = "Copy Link";
+        setTimeout(() => {
+            button.current!.textContent = "Copy Link";
+        }, 225)
     }
 
     return (

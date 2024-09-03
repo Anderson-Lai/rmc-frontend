@@ -7,7 +7,13 @@ export default function Announcements() {
             <PageTitle title="ANNOUNCEMENTS" />
 
             <div className="my-14 flex justify-center">
-                <AnnouncementCard link="" embed={<div></div>} title="Click to view the latest announcements!" />
+                <AnnouncementCard 
+                    title="Click to view the latest announcements!"
+                    link="https://docs.google.com/spreadsheets/d/1ls3lAzoKo3OTLW5JOCwc21LVKx-p0PCFeidrfXkptME/edit?usp=sharing" 
+                    embed={
+                        <div></div>
+                    }  
+                />
             </div>
         </>
     );
