@@ -405,7 +405,7 @@ export const councils: Extracurricular[] = [
         welcomingNewMembers: true
     },
     {
-        name: "STUCO",
+        name: "STUCO (Student Council)",
         frequency: "Monday weekly from 2:30 to 3:30",
         value: 1,
         biography: "Student body government providing opportunities to build community.",
