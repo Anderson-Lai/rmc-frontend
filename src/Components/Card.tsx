@@ -29,7 +29,7 @@ export default function Card( { image, title, body, link, noopen } : Props ) {
                 </div>
             }
             
-            <h4 className="text-2xl font-semibold mb-2">{title}</h4>
+            <h4 className="text-2xl font-semibold mb-2 w-[80%]">{title}</h4>
             <p>{body}</p>
         </div>
     );
