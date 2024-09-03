@@ -37,12 +37,8 @@ export default function Home() {
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-x-7">
                     {
-                        Object.keys(cardData).map(k => {
-                            const key = k as keyof typeof cardData;
-                            return (
-                                <Card image={cardData[key].image} title={cardData[key].title} 
-                                body={cardData[key].body} key={v4()} />
-                            );
+                        cardData.map(card => {
+                            return <Card {...card} key={v4()} />
                         })
                     }
                 </div>

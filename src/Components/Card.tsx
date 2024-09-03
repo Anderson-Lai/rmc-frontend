@@ -1,17 +1,21 @@
 
 
-type Props = {
+export type Props = {
     image: string,
     title: string,
     body: string,
     link?: string,
+    noopen?: boolean
 }
 
-export default function Card( { image, title, body, link } : Props ) {
+export default function Card( { image, title, body, link, noopen } : Props ) {
 
     function handleClick() {
-        if (link != null && link != undefined && link != "") {
+        if (link && !noopen) {
             window.open(link, "_blank", "noopener,noreferrer");
+        }
+        else if (link && noopen) {
+            window.location.href = link;
         }
     }
 
