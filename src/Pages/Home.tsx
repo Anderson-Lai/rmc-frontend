@@ -26,7 +26,7 @@ export default function Home() {
                 <TypewriterEffect className="text-8xl lg:text-9xl font-bold text-center" message="RAMS MEDIA" characterDelay={75} />
                 <h4 className="font-semibold mt-10">Rising Artists Marketing and Storytelling</h4>
 
-                <button className="mt-12 text-2xl rounded-xl border-2 border-border-light-yellow px-3 py-2
+                <button className="mt-6 text-xl rounded-xl border-2 border-border-light-yellow px-5 py-2
                  hover:-translate-y-2 duration-150 delay-75 hover:shadow-button-white">
                     <Link to="/contact">Contact Us</Link>
                 </button>
@@ -48,7 +48,7 @@ export default function Home() {
                 <h2 className="font-bold text-center text-3xl">St. Robert CHS</h2>
                 <p className="text-center my-9" style={{maxWidth: "50%"}}>{appDescription}</p>
 
-                <button className="mt-4 text-2xl rounded-xl border-2 border-border-light-yellow px-3 py-2
+                <button className="mt-4 text-lg rounded-xl border-2 border-border-light-yellow px-5 py-2
                  hover:-translate-y-2 duration-150 delay-75 hover:shadow-button-white"
                  onClick={handleDownload}>
                     Download the App

@@ -14,9 +14,9 @@ export default function Layout( { children } : Props ) {
     return (
         <div className="flex flex-col min-h-screen justify-between from-bg-dark-green to-bg-black bg-gradient-to-t">
             <div className="flex flex-col">
-                <header className="text-text-light-green flex justify-between items-center px-4 py-3 my-5 max-h-fit">
+                <header className="text-text-light-green flex justify-between items-center px-4 py-3 mb-5 mt-10 max-h-fit">
 
-                    <div className="sm:min-w-96 md:min-w-32 flex justify-center items-center">
+                    <div className="w-16 lg:w-20 flex justify-end items-center mx-5 md:mx-10">
                         <Logo logo={logo} />
                     </div>
 
@@ -35,7 +35,7 @@ export default function Layout( { children } : Props ) {
                         
                     </nav>
 
-                    <div className="sm:min-w-96 md:min-w-32 flex justify-center items-center">
+                    <div className="w-16 lg:w-20 flex justify-start items-center mx-5 md:mx-10">
                         <Hamburger links={links} />    
                     </div>
                 </header>
