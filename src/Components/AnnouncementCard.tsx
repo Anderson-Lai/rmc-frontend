@@ -15,12 +15,6 @@ export default function AnnouncementCard( { title, link, embed} : Props ) {
         window.open(link, "_blank", "noreferrer,noopener")
     }
 
-    function handleMouseOut() {
-        setTimeout(() => {
-            button.current!.textContent = "Copy Link";
-        }, 225);
-    }
-
     return (
         <div className="border-2 border-border-light-yellow rounded-xl hover:shadow-small-white
             duration-150 delay-75 font-title-famil flex flex-col items-center 
@@ -39,7 +33,6 @@ export default function AnnouncementCard( { title, link, embed} : Props ) {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={goto}
-                onMouseOut={handleMouseOut}
             >
                 Go to Spreadsheet
             </motion.button>
