@@ -57,7 +57,7 @@ export default function ExtracurricularCard( { name, frequency, biography, locat
             }
 
             {
-                welcomingNewMembers !== null && 
+                welcomingNewMembers !== undefined && 
                 <div className="my-2">
                     <h4 className="text-xl font-semibold">Welcoming New Members?</h4>
                     <p className="text-lg">{welcomingNewMembers ? "Yes" : "No"}</p>
