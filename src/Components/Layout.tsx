@@ -35,7 +35,7 @@ export default function Layout( { children } : Props ) {
                         
                     </nav>
 
-                    <div className="w-16 lg:w-20 flex justify-start items-center mx-5 md:mx-10">
+                    <div className="w-16 lg:w-20 flex justify-center items-center mx-5 md:mx-10">
                         <Hamburger links={links} />    
                     </div>
                 </header>
