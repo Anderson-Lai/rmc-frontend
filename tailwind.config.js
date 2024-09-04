@@ -11,7 +11,8 @@ export default {
         "bg-black": "#000000",
         "text-light-green": "#9BAB8A",
         "border-light-yellow": "#F5E3B1",
-        "text-secondary": "#636c73"
+        "text-secondary": "#636c73",
+        "button-hover": "#F5E3B1"
       },
       fontFamily: {
         "title-family": "Montserrat"

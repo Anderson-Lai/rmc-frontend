@@ -3,9 +3,10 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import x from '../assets/x-img.svg'
 import { v4 } from "uuid";
+import type { LinkObject } from "../Data/LayoutData";
 
 type Props = {
-    links: object,
+    links: LinkObject[],
 }
 
 export default function Hamburger( { links } : Props ) {
@@ -54,18 +55,16 @@ export default function Hamburger( { links } : Props ) {
                     </div>
                     <div className="flex flex-col">
                         {
-                            Object.keys(links).map((key) => {
-                                    return (
-                                        <Link to={links[key as keyof typeof links]} 
-                                            className="my-1 mx-2 duration-150 px-3 py-2 hover:bg-indigo-900 
-                                            hover:rounded-lg font-semibold" 
-                                            key={v4()}
-                                            onClick={toggleMenu}
-                                        >
-                                                {key}
-                                        </Link>
-                                    );
-                                })
+                            links.map(link => {
+                                return (
+                                    <Link to={link.link}
+                                        className="my-1 mx-2 duration-150 px-3 py-2 hover:bg-button-hover
+                                        hover:rounded-lg font-semibold" key={v4()}
+                                    >
+                                        {link.title}
+                                    </Link>
+                                );
+                            })
                         }
                     </div>
                 </motion.div>

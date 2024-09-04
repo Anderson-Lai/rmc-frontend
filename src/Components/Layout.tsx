@@ -22,12 +22,14 @@ export default function Layout( { children } : Props ) {
 
                     <nav className="hidden lg:flex h-fit place-items-center">
                         {
-                            Object.keys(links).map((key) => {
+                            links.map(link => {
                                 return (
-                                    <Link to={links[key as keyof typeof links]} className="px-3 py-1
-                                    mx-4 my-2 text-xl duration-150 hover:bg-indigo-900 
-                                    rounded-lg font-semibold h-fit" key={v4()}>
-                                        {key}
+                                    <Link to={link.link}
+                                        className="px-3 py-1
+                                        mx-4 my-2 text-xl duration-150 hover:bg-button-hover
+                                        rounded-lg font-semibold h-fit" key={v4()}
+                                    >
+                                        {link.title}
                                     </Link>
                                 );
                             })
