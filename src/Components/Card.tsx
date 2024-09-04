@@ -20,7 +20,7 @@ export default function Card( { image, title, body, link, noopen } : Props ) {
     }
 
     return (
-        <div className="border-2 border-border-light-yellow hover:shadow-small-white flex flex-col px-7 py-3
+        <div className="border-2 border-border-light-yellow hover:shadow-small-white flex flex-col p-3
             my-4 rounded-xl hover:-translate-y-2 duration-150 delay-75" onClick={handleClick}>
             {
                 image &&
@@ -29,8 +29,10 @@ export default function Card( { image, title, body, link, noopen } : Props ) {
                 </div>
             }
             
-            <h4 className="text-2xl font-semibold mb-2 w-[80%]">{title}</h4>
-            <p>{body}</p>
+            <div className="px-4">
+                <h4 className="text-2xl font-semibold mb-2 w-[80%]">{title}</h4>
+                <p>{body}</p>
+            </div>
         </div>
     );
 }
