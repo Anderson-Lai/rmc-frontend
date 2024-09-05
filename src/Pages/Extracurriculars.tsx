@@ -103,7 +103,7 @@ export default function Extracurriculars() {
             <div className="mt-14 px-3 md:px-12">
                 <input
                     placeholder="Search for a club or council..."
-                    className="w-full bg-transparent rounded-xl text-xl px-3 py-1 border-2 border-border-light-yellow"
+                    className="w-full bg-transparent rounded-xl text-lg px-3 py-1 border-2 border-border-light-yellow"
                     onChange={handleChange}
                     value={search}
                 />
