@@ -24,7 +24,7 @@ export default function Card( { image, title, body, link, noopen } : Props ) {
             my-4 rounded-xl hover:-translate-y-2 duration-150 delay-75" onClick={handleClick}>
             {
                 image &&
-                <div className="flex justify-end">
+                <div className="flex justify-end mr-2 mt-2">
                     <img src={image} className="max-w-12" alt="image" />
                 </div>
             }
