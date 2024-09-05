@@ -60,6 +60,7 @@ export default function Hamburger( { links } : Props ) {
                                     <Link to={link.link}
                                         className="my-1 mx-2 duration-150 px-3 py-2 hover:bg-button-hover
                                         hover:rounded-lg font-semibold" key={v4()}
+                                        onClick={hideMenu}
                                     >
                                         {link.title}
                                     </Link>

@@ -15,7 +15,8 @@ export default function Home() {
         
         if (ios) {
             window.open(iosLink, "_blank", "noreferrer,noopener");
-        } else {
+        } 
+        else {
             window.open(googleLink, "_blank", "noreferrer,noopener");
         }
     }
