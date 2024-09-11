@@ -1,6 +1,6 @@
 import { ReactElement } from "react"
 import { Link } from "react-router-dom";
-import { links } from "../Data/LayoutData";
+import { links, hamburgerLinks} from "../Data/LayoutData";
 import logo from '../assets/logo.png';
 import Logo from "../Components/Logo";
 import Hamburger from "./Hamburger";
@@ -38,7 +38,7 @@ export default function Layout( { children } : Props ) {
                     </nav>
 
                     <div className="w-16 lg:w-20 flex justify-center items-center mx-5 md:mx-10">
-                        <Hamburger links={links} />    
+                        <Hamburger links={hamburgerLinks} />    
                     </div>
                 </header>
                 <main className="text-white">

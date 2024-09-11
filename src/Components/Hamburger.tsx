@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import x from '../assets/x-img.svg'
 import { v4 } from "uuid";
-import type { LinkObject } from "../Data/LayoutData";
+import type { HamburgerLink } from "../Data/LayoutData";
 
 type Props = {
-    links: LinkObject[],
+    links: HamburgerLink[],
 }
 
 export default function Hamburger( { links } : Props ) {
@@ -59,10 +59,17 @@ export default function Hamburger( { links } : Props ) {
                                 return (
                                     <Link to={link.link}
                                         className="my-1 mx-2 duration-150 px-3 py-2 hover:bg-button-hover
-                                        hover:rounded-lg font-semibold" key={v4()}
+                                        hover:rounded-lg font-semibold flex items-center" key={v4()}
                                         onClick={hideMenu}
+                                        target={link.target}
                                     >
                                         {link.title}
+
+                                        {
+                                            link.Image &&
+
+                                            <link.Image size={20} className="mx-4" />
+                                        }
                                     </Link>
                                 );
                             })
