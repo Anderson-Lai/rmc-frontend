@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 type Props = {
     title: string,
     link: string,
-    embed: ReactNode
+    embed?: ReactNode
 }
 
 export default function AnnouncementCard( { title, link, embed} : Props ) {
@@ -23,9 +23,23 @@ export default function AnnouncementCard( { title, link, embed} : Props ) {
             <h2 className="text-2xl text-center font-semibold">{title}</h2>
             <hr className="border border-border-light-yellow w-full mt-2 mb-5" />
 
-            <div className="w-full h-[35vh] cursor-pointer">
-                {embed}
-            </div>
+            {
+                embed !== undefined ? 
+                (
+                    <div className="w-full h-[35vh] cursor-pointer">
+                        {embed}
+                    </div>
+                )
+                :
+                (
+                    <div className="w-full">
+                        <p className="text-center text-xl">
+                            Sorry! The spreadsheet embed is currently not available.
+                            Click below to view the spreadsheet normally.
+                        </p>
+                    </div>
+                )
+            }
             <motion.button
                 ref={button}
                 className="rounded-full px-3 py-1 text-xl text-center bg-bg-dark-green mt-4"
