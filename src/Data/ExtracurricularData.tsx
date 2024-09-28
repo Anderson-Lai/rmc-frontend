@@ -9,7 +9,6 @@ export type Extracurricular = {
     teacherAdvisors?: string[],
     contactInformation?: string[],
     presidents?: string[],
-    welcomingNewMembers?: boolean
 }
 
 export const clubs: Extracurricular[] = [
@@ -21,7 +20,6 @@ export const clubs: Extracurricular[] = [
         location: "Room 223",
         teacherAdvisors: ["Mr. Wood"],
         contactInformation: ["IG: @theaxiomnewspaper", "Website: theaxiom.ca"],
-        welcomingNewMembers: undefined
     },
     {
         name: "Band (Junior, Intermediate, Senior)",
@@ -30,7 +28,6 @@ export const clubs: Extracurricular[] = [
         biography: "St Robs' various bands are here to deliver excellent musical melodies to your ears!",
         location: "Rooms 111 and 133",
         teacherAdvisors: ["B. Facchini", "A. DeGirolamo"],
-        welcomingNewMembers: undefined
     },
     {
         name: "Board Games Club",
@@ -38,7 +35,6 @@ export const clubs: Extracurricular[] = [
         value: 1,
         biography: "Sharing our love and utter enjoyment for all Board Games!! Come join us and play a few rounds of various Board Games!",
         teacherAdvisors: ["J. Buckley"],
-        welcomingNewMembers: undefined
     },
     {
         name: "Chaplaincy Choir",
@@ -48,7 +44,6 @@ export const clubs: Extracurricular[] = [
         location: "Chapel",
         teacherAdvisors: ["A. Koon"],
         contactInformation: ["IG: @strchaplaincy"],
-        welcomingNewMembers: undefined
     },
     {
         name: "Chinese Cultural Heritage Club",
@@ -57,7 +52,6 @@ export const clubs: Extracurricular[] = [
         biography: "Join St Rob's very own Chinese Cultural Heritage Club as we appreciate China's heritage and unique culture!",
         location: "Room 141",
         teacherAdvisors: ["J. Liu"],
-        welcomingNewMembers: undefined
     },
     {
         name: "Concert Choir",
@@ -66,7 +60,6 @@ export const clubs: Extracurricular[] = [
         biography: "Run by our wonderful Ms. Facchini, we at Concert Choir diligently practice to bring extraordinary vocals, (which are fit for a concert) to St Roberts!!",
         location: "Room 111",
         teacherAdvisors: ["B. Facchini"],
-        welcomingNewMembers: undefined
     },
     {
         name: "Coding Club",
@@ -76,7 +69,6 @@ export const clubs: Extracurricular[] = [
         location: "Rooms 119 and 120",
         teacherAdvisors: ["V. Odhutan"],
         contactInformation: ["IG: @strcodingclub"],
-        welcomingNewMembers: undefined
     },
     {
         name: "Creative Writing Club",
@@ -85,7 +77,6 @@ export const clubs: Extracurricular[] = [
         biography: "The Creative Writing Club",
         location: "Room 254",
         teacherAdvisors: ["M. Durrant"],
-        welcomingNewMembers: undefined
     },
     {
         name: "Cultures Club",
@@ -94,7 +85,6 @@ export const clubs: Extracurricular[] = [
         biography: "Celebrate the beauty of culture at STR's Cultures Club! We encourage all to join us and unlock a realm of diversity and cultural knowledge.",
         location: "P08",
         teacherAdvisors: ["J. Buckley"],
-        welcomingNewMembers: undefined
     },
     {
         name: "STR Debate",
@@ -103,7 +93,6 @@ export const clubs: Extracurricular[] = [
         biography: "Don't hate it, debate it! At STR Debate, we hone our debating skills and bring our passion and knowledge to various tournaments throughout the year!",
         teacherAdvisors: ["J. Conte"],
         contactInformation: ["IG: @strdebate"],
-        welcomingNewMembers: undefined
     },
     {
         name: "DECA",
@@ -113,7 +102,6 @@ export const clubs: Extracurricular[] = [
         location: "Rooms 119, 120, 244, 246, 248, and the Library",
         teacherAdvisors: ["K. Cruz", "T. Frattaroli", "E. Grah", "B. Lam", "W. Mak", "J. Miele"],
         contactInformation: ["IG: @str.deca"],
-        welcomingNewMembers: undefined
     },
     {
         name: "ESL Squad",
@@ -122,7 +110,6 @@ export const clubs: Extracurricular[] = [
         biography: "We're the ESL Squad - a club dedicated to fostering English language proficiency and cultural exchange!",
         location: "Room 218",
         teacherAdvisors: ["M. Ferrari", "M. Buchignani"],
-        welcomingNewMembers: undefined
     },
     {
         name: "ESP",
@@ -132,7 +119,6 @@ export const clubs: Extracurricular[] = [
         location: "Room 200",
         teacherAdvisors: ["G. Provenzano"],
         contactInformation: ["IG: @st.robert_esp"],
-        welcomingNewMembers: undefined
     },
     {
         name: "French Homework Club",
@@ -141,7 +127,6 @@ export const clubs: Extracurricular[] = [
         biography: "Need help avec le français? Don't worry, because the French Homework Club got you! Drop in and get the help you need with any of YOUR French work! Just know that, nous sommes là pour vous aider!",
         location: "Room 222",
         teacherAdvisors: ["N. Torresan"],
-        welcomingNewMembers: undefined
     },
     {
         name: "GRL PWR",
@@ -149,7 +134,6 @@ export const clubs: Extracurricular[] = [
         value: 1,
         location: "Room 152",
         contactInformation: ["Google Classroom: vixlob2"],
-        welcomingNewMembers: undefined 
     },
     {
         name: "STR HOSA",
@@ -158,7 +142,6 @@ export const clubs: Extracurricular[] = [
         biography: "Hey St Robs! Would you like to learn more about the health-sci field? To network with like-minded people and build connections? To learn about different future medical career pathways? Then join STR HOSA because we would love to have you!",
         teacherAdvisors: ["C. Cusimano"],
         contactInformation: ["IG: @strhosa"],
-        welcomingNewMembers: undefined
     },
     {
         name: "Jazz Band",
@@ -167,7 +150,6 @@ export const clubs: Extracurricular[] = [
         biography: "We're STR's Jazz Band, dedicated to adding a jazzy twist to the school community! If you enjoy playing jazz as much as we do, come practice with us!",
         location: "Room 133",
         teacherAdvisors: ["A. DeGirolamo"],
-        welcomingNewMembers: undefined
     },
     {
         name: "La Silhouette",
@@ -176,7 +158,6 @@ export const clubs: Extracurricular[] = [
         biography: "Nous sommes le journal français de l'école St Robert! Read our award-winning articles or come write one yourself! You don't need to be good at french to do so - JUSTE ESSAYER DE VOTRE MIEUX (JUST TRY YOUR BEST)!",
         location: "Room 218",
         contactInformation: ["IG: @lasilhouettejournal", "Twitter/X: https://twitter.com/LaSilhouette3", "Website: https://silhouettejournal.com"],
-        welcomingNewMembers: undefined
     },
     {
         name: "Math Club",
@@ -185,7 +166,6 @@ export const clubs: Extracurricular[] = [
         biography: "Putting STR on the map, one equation at a time! Join fellow “mathemati-cians” as we explore, break down and solve a myriad of math problems from the simple to complex!",
         location: "Rooms 203 and 205",
         teacherAdvisors: ["G. Provenzano", "D. Do"],
-        welcomingNewMembers: undefined
     },
     {
         name: "Med-Sci & Statistics",
@@ -195,7 +175,6 @@ export const clubs: Extracurricular[] = [
         location: "Library",
         teacherAdvisors: ["J. Buckley"],
         contactInformation: ["IG: @strmsclub"],
-        welcomingNewMembers: undefined
     },
     {
         name: "Mindful Club",
@@ -205,7 +184,6 @@ export const clubs: Extracurricular[] = [
         location: "Room 118",
         teacherAdvisors: ["M. Boccia"],
         contactInformation: ["IG: @mindful.str"],
-        welcomingNewMembers: undefined,
     },
     {
         name: "Orchestra",
@@ -214,7 +192,6 @@ export const clubs: Extracurricular[] = [
         biography: "STR's Orchestral band - combining different musical families to perform wonderful melodies!",
         location: "Room 111",
         teacherAdvisors: ["B. Facchini"],
-        welcomingNewMembers: undefined,
     },
     {
         name: "Mural Club",
@@ -224,7 +201,6 @@ export const clubs: Extracurricular[] = [
         location: "Room 226",
         teacherAdvisors: ["V. Meloche"],
         contactInformation: ["IG: @strmuralclub"],
-        welcomingNewMembers: undefined
     },
     {
         name: "Philosophy Club",
@@ -234,7 +210,6 @@ export const clubs: Extracurricular[] = [
         location: "Room 218",
         teacherAdvisors: ["A. Parravani", "R. Wood"],
         contactInformation: ["IG: @str.philosophy"],
-        welcomingNewMembers: undefined
     },
     {
         name: "Physics Club",
@@ -244,7 +219,6 @@ export const clubs: Extracurricular[] = [
         location: "Room 145",
         teacherAdvisors: ["B. Leduc"],
         contactInformation: ["IG: @strobphysics"],
-        welcomingNewMembers: undefined
     },
     {
         name: "PRISM Interfaith",
@@ -252,7 +226,6 @@ export const clubs: Extracurricular[] = [
         value: 1,
         location: "P07",
         teacherAdvisors: ["G. Cara"],
-        welcomingNewMembers: undefined
     },
     {
         name: "Psychology Club",
@@ -262,7 +235,6 @@ export const clubs: Extracurricular[] = [
         location: "P09",
         teacherAdvisors: ["M. Boccia"],
         contactInformation: ["IG: @str.psychology"],
-        welcomingNewMembers: undefined
     },
     {
         name: "RAMS Roadies Tech Club",
@@ -271,7 +243,6 @@ export const clubs: Extracurricular[] = [
         biography: "Keeping our assemblies working, one wire at a time! The Tech Club, led by Mr. Lothian is in charge of the technical aspects that power this school! New members are ALWAYS welcome!",
         location: "Room 122",
         teacherAdvisors: ["R. Lothian"],
-        welcomingNewMembers: undefined
     },
     {
         name: "Reach for the Top",
@@ -280,7 +251,6 @@ export const clubs: Extracurricular[] = [
         biography: "If participating in a game of wit and skill, answering a slew of trivia questions, or outsmarting opponents is interesting to you - JOIN OUR REACH FOR THE TOP TEAM! We'll be waiting for you!",
         location: "Room 206",
         teacherAdvisors: ["J. Guerrisi", "D. Zmak"],
-        welcomingNewMembers: undefined
     },
     {
         name: "SPECTRUM (Pride Club)",
@@ -290,7 +260,6 @@ export const clubs: Extracurricular[] = [
         location: "Room 226",
         teacherAdvisors: ["J. Buckley", "M. Boon"],
         contactInformation: ["IG: @robs.spectrum"],
-        welcomingNewMembers: undefined
     },
     {
         name: "St. Robs Yearbook Committee",
@@ -300,7 +269,6 @@ export const clubs: Extracurricular[] = [
         location: "Room 228",
         teacherAdvisors: ["T. Klobucar"],
         contactInformation: ["IG: @strobsyearbook"],
-        welcomingNewMembers: undefined
     },
     {
         name: "STR Finance",
@@ -310,7 +278,6 @@ export const clubs: Extracurricular[] = [
         location: "P08",
         teacherAdvisors: ["E. Nagy-Bakos"],
         contactInformation: ["IG: @str.finance", "YT:@STRFinance"],
-        welcomingNewMembers: undefined
     },
     {
         name: "Ram's Media Club (RMC)",
@@ -318,7 +285,6 @@ export const clubs: Extracurricular[] = [
         value: 1,
         teacherAdvisors: ["C. Laboni-Laviolette"],
         contactInformation: ["IG: @ramsmediaclub"],
-        welcomingNewMembers: undefined
     },
     {
         name: "STR Cafe Club",
@@ -328,7 +294,6 @@ export const clubs: Extracurricular[] = [
         location: "Room 118B",
         teacherAdvisors: ["J. Conte"],
         contactInformation: ["IG: @strcafeclub"],
-        welcomingNewMembers: undefined
     },
     {
         name: "STR Announcements",
@@ -337,7 +302,6 @@ export const clubs: Extracurricular[] = [
         biography: "Interested in being the voice of our school? Want to help hand-pick the songs that play over the morning PA? If so, then apply to join our team of talented and enthusiastic readers! Together, we'll elevate your mornings with energizing voices and upbeat tunes! Follow us on Instagram as we bring you the latest announcements at STR!",
         teacherAdvisors: ["S. Barclay", "K. Dela Cruz"],
         contactInformation: ["IG: @strannouncements"],
-        welcomingNewMembers: undefined
     }
 ].sort((first, second) => first.name.localeCompare(second.name));
 
@@ -349,7 +313,6 @@ export const councils: Extracurricular[] = [
         biography: "To promote the Arts and offer opportunities for students to participate in activities involving art, drama and music.",
         teacherAdvisors: ["B. Facchini", "M. Boon"],
         contactInformation: ["IG: @strobs.arts"],
-        welcomingNewMembers: undefined
     },
     {
         name: "Chaplaincy Council",
@@ -357,8 +320,7 @@ export const councils: Extracurricular[] = [
         value: 1,
         biography: "Supporting the needs of our school community through faith.",
         teacherAdvisors: ["P. Karisch"],
-        contactInformation: ["IG: @strchaplaincy"],
-        welcomingNewMembers: undefined
+        contactInformation: ["IG: @strchaplaincy"], 
     },
     {
         name: "Environmental Council",
@@ -367,7 +329,6 @@ export const councils: Extracurricular[] = [
         biography: "To promote environmental stewardship in the school community.",
         teacherAdvisors: ["C. Ciobanu"],
         contactInformation: ["IG: @STREnvirocouncil", "TikTok: Strobertenviro"],
-        welcomingNewMembers: undefined
     },
     {
         name: "French Council",
@@ -375,8 +336,7 @@ export const councils: Extracurricular[] = [
         value: 1,
         biography: "To promote and encourage the French language in a bilingual setting.",
         teacherAdvisors: ["N. Torresan"],
-        contactInformation: ["IG: @strfrenchcouncil", "Twitter/X: @strobertfrench"],
-        welcomingNewMembers: undefined
+        contactInformation: ["IG: @strfrenchcouncil", "Twitter/X: @strobertfrench"], 
     },
     {
         name: "SAC (Student Athletic Council)",
@@ -385,7 +345,6 @@ export const councils: Extracurricular[] = [
         biography: "Promote physical activity and school spirit through participation in sport.",
         teacherAdvisors: ["M. Elacqua"],
         contactInformation: ["IG: @strobertsac", "Twitter/X: @StrobsSAC"],
-        welcomingNewMembers: undefined
     },
     {
         name: "Social Justice Council",
@@ -394,22 +353,19 @@ export const councils: Extracurricular[] = [
         biography: "To promote both awareness, teachings and actions within Social Justice (Includes teaching that are Scripture based and a calling to all.).",
         teacherAdvisors: ["C. Roccari"],
         contactInformation: ["IG: @str.socialjustice"],
-        welcomingNewMembers: undefined
     },
     {
         name: "STEAM Council",
         frequency: "Monday weekly from 2:30 to 3:30",
         value: 1,
         biography: "To engage students in STEAM activities.",
-        contactInformation: ["IG: @strstemcouncil"],
-        welcomingNewMembers: undefined
+        contactInformation: ["IG: @strstemcouncil"], 
     },
     {
         name: "STUCO (Student Council)",
         frequency: "Monday weekly from 2:30 to 3:30",
         value: 1,
         biography: "Student body government providing opportunities to build community.",
-        contactInformation: ["IG: @StRobsStuco", "Twitter/X: @StRobsStuco"],
-        welcomingNewMembers: undefined
+        contactInformation: ["IG: @StRobsStuco", "Twitter/X: @StRobsStuco"],   
     }
 ].sort((first, second) => first.name.localeCompare(second.name));

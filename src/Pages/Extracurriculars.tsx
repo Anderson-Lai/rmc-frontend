@@ -34,7 +34,7 @@ function cleanString(string: string) {
 function ecToString(ec: Extracurricular) {
     let result = "";
     const { name, frequency, biography, location, 
-        teacherAdvisors, contactInformation, presidents, welcomingNewMembers } = ec;
+        teacherAdvisors, contactInformation, presidents } = ec;
     
     // cleaning data
     let cleanName = cleanString(name);
@@ -52,9 +52,6 @@ function ecToString(ec: Extracurricular) {
     result += cleanTeacherAdvisors ? cleanTeacherAdvisors + " " : "";
     result += cleanContactInformation ? cleanContactInformation + " " : "";
     result += cleanPresidents ? cleanPresidents + " " : "";
-
-    // will be converted to lower case by cleanString()
-    result += welcomingNewMembers ? "Yes" : "No";
 
     return result.trim();
 }
