@@ -1,8 +1,7 @@
 import type { Extracurricular } from "../Data/ExtracurricularData";
 
 export default function ExtracurricularCard( { name, frequency, biography, location, teacherAdvisors,
-    contactInformation, presidents, welcomingNewMembers
- } : Extracurricular ) {
+    contactInformation, presidents } : Extracurricular ) {
 
     return (
         <div className="border border-border-light-yellow rounded-lg
@@ -53,14 +52,6 @@ export default function ExtracurricularCard( { name, frequency, biography, locat
                 <div className="my-2">
                     <h4 className="text-xl font-semibold">Location:</h4>
                     <p className="text-lg">{location}</p>
-                </div>
-            }
-
-            {
-                welcomingNewMembers !== undefined && 
-                <div className="my-2">
-                    <h4 className="text-xl font-semibold">Welcoming New Members?</h4>
-                    <p className="text-lg">{welcomingNewMembers ? "Yes" : "No"}</p>
                 </div>
             }
         </div>
