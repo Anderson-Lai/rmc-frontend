@@ -1,3 +1,5 @@
+// deprecated
+
 import PageTitle from "../Components/PageTitle";
 import ContactCard from "../Components/ContactCard";
 import { v4 } from "uuid";
