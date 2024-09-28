@@ -34,7 +34,7 @@ export default function AnnouncementCard( { title, link, embed} : Props ) {
                 (
                     <div className="w-full">
                         <p className="text-center text-xl">
-                            Sorry! The spreadsheet embed is currently not available.
+                            Sorry! The spreadsheet embed is currently unavailable.
                             Click below to view the spreadsheet normally.
                         </p>
                     </div>

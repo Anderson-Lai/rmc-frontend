@@ -1,3 +1,5 @@
+// deprecated
+
 import type { Props } from "../Components/ContactCard";
 import { FaInstagram } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
