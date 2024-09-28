@@ -78,7 +78,7 @@ export default function Hamburger( { links } : Props ) {
                 </motion.div>
 
                 {/* hamburger menu */}
-                <div className="w-[30px] cursor-pointer" onClick={handleClick}>
+                <div className="w-[30px] cursor-pointer py-1" onClick={handleClick}>
                     <h4 className="border border-white my-2" />
                     <h4 className="border border-white my-2" />
                     <h4 className="border border-white my-2" />
