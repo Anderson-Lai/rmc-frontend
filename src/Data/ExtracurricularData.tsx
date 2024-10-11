@@ -283,7 +283,7 @@ export const clubs: Extracurricular[] = [
         name: "Ram's Media Club (RMC)",
         frequency: "Find more info on Instagram/Discord",
         value: 1,
-        teacherAdvisors: ["C. Laboni-Laviolette"],
+        teacherAdvisors: ["L. Iaboni-Laviolette"],
         contactInformation: ["IG: @ramsmediaclub"],
     },
     {
