@@ -28,9 +28,7 @@ export default function Contact() {
                 <div className="">
                     {
                         contacts.map((value, index) => {
-                            return (
-                                    <ContactCard {...value} delay={index * 0.15} key={v4()} />
-                            );
+                            return <ContactCard {...value} delay={index * 0.15} key={v4()} />
                         })
                     }
                 </div>

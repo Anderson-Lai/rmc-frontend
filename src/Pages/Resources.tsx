@@ -15,9 +15,7 @@ export default function Resources() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-7">
                     {
                         Object.keys(generalData).map(k => {
-                            return (
-                                <Card {...generalData[k as keyof typeof generalData]} key={v4()} />
-                            );
+                            return <Card {...generalData[k as keyof typeof generalData]} key={v4()} />
                         })
                     }
                 </div>
