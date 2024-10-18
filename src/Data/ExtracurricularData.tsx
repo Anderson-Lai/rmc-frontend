@@ -317,7 +317,7 @@ export const clubs: Extracurricular[] = [
         name: "Anthropology Club",
         frequency: "Thursday biweekly",
         value: 1,
-        biography: "Are you a human? If so, then join Anthropology Club! All jokes aside - we’re committed to studying humans, what we are, and how we developed as a species! Join us today!",
+        biography: "Are you a human? If so, then join Anthropology Club! All jokes aside - we're committed to studying humans, what we are, and how we developed as a species! Join us today!",
         location: "Room 249",
         contactInformation: ["IG: @str.anthropology"]
     },
