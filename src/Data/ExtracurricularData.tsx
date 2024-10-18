@@ -283,6 +283,7 @@ export const clubs: Extracurricular[] = [
         name: "Ram's Media Club (RMC)",
         frequency: "Find more info on Instagram/Discord",
         value: 1,
+        biography: "Lights, camera, action! Are you interested in film, photography, VFX, and more? Do you want to contribute to your school community and leave a lasting impression at St. Robert? RMC, also known as the Rams Media Club, aims to amplify student voices through creative mediums. Join the Media Club today!",
         teacherAdvisors: ["L. Iaboni-Laviolette"],
         contactInformation: ["IG: @ramsmediaclub"],
     },
@@ -302,6 +303,50 @@ export const clubs: Extracurricular[] = [
         biography: "Interested in being the voice of our school? Want to help hand-pick the songs that play over the morning PA? If so, then apply to join our team of talented and enthusiastic readers! Together, we'll elevate your mornings with energizing voices and upbeat tunes! Follow us on Instagram as we bring you the latest announcements at STR!",
         teacherAdvisors: ["S. Barclay", "K. Dela Cruz"],
         contactInformation: ["IG: @strannouncements"],
+    },
+    {
+        name: "History Club",
+        frequency: "Tuesday biweekly",
+        value: 1,
+        biography: "History Club aims to create a fun, friendly space for students to go deeper into their interests in history! Whether it's trivia, movie nights, debates, or even historical video game competitions, we hope expand your knowledge not only towards both forgotten historical events or niches, but also challenging and revising currently established history.",
+        location: "Room 228",
+        teacherAdvisors: ["D. Rovere"],
+        contactInformation: ["IG: @strhistory"]
+    },
+    {
+        name: "Anthropology Club",
+        frequency: "Thursday biweekly",
+        value: 1,
+        biography: "Are you a human? If so, then join Anthropology Club! All jokes aside - we’re committed to studying humans, what we are, and how we developed as a species! Join us today!",
+        location: "Room 249",
+        contactInformation: ["IG: @str.anthropology"]
+    },
+    {
+        name: "Karaoke Club",
+        frequency: "Friday weekly",
+        value: 1,
+        biography: "Karaoke Club is, simply put, a place for people to sing at the top of their lungs in unison. Look, we just wanna be really loud, have fun, and chill. So come join the “loudest” club at this school, and sing your heart out!",
+        location: "Room 241",
+        teacherAdvisors: ["G. Ciobanu"],
+        contactInformation: ["IG: @strkaraokeclub"]
+    },
+    {
+        name: "Life Fellowship",
+        frequency: "Tuesday biweekly",
+        value: 1,
+        biography: "LIFE Fellowship @ STR seeks to glorify God and evangelise to our school community! Come join fellow students interested in cultivating our faith in our daily lives!",
+        location: "Room 137",
+        teacherAdvisors: ["P. Karisch"],
+        contactInformation: ["IG: @lifefelly"]
+    },
+    {
+        name: "STR Architecture",
+        frequency: "Wednesday biweekly",
+        value : 1,
+        biography: "The St. Robert's Architecture Club helps students understand fundamental architectural concepts and how different structures are created. Our meetings have a relaxed environment, with food and fun, engaging activities to do with your friends! So come join the “Building Magicians of STR”!!",
+        location: "Room 152",
+        teacherAdvisors: ["A. Sawicka"],
+        contactInformation: ["IG: @robs.architects"]
     }
 ].sort((first, second) => first.name.localeCompare(second.name));
 
