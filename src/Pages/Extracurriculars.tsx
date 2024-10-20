@@ -94,7 +94,7 @@ export default function Extracurriculars() {
     }
 
     function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
-        if (e.key === 'Backspace') {
+        if (e.key === "Backspace") {
             const target = e.target as HTMLInputElement;
             
             // check if input is highlighted (such as via ctrl + a)
