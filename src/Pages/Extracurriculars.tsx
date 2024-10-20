@@ -79,14 +79,14 @@ function setValues(ecs: Extracurricular[], search: string) {
 }
 
 export default function Extracurriculars() {
-    
+
     const [search, setSearch] = useState("");
     const [filteredClubs, setFilteredClubs] = useState(clubs);
     const [filteredCouncils, setFilteredCouncils] = useState(councils);
 
-    function updateFilter(search: string) {
-        setFilteredClubs((c) => setValues(c, search));
-        setFilteredCouncils((c) => setValues(c, search));
+    function updateFilter(inputValue: string) {
+        setFilteredClubs((c) => setValues(c, inputValue));
+        setFilteredCouncils((c) => setValues(c, inputValue));
     }
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -99,6 +99,8 @@ export default function Extracurriculars() {
             
             // check if input is highlighted (such as via ctrl + a)
             if (target.selectionStart === 0 && target.selectionEnd === search.length) {
+                // manually clear the input
+                e.preventDefault();
                 setSearch(() => "");
 
                 // since react bundles state updates, manually pass in ""
