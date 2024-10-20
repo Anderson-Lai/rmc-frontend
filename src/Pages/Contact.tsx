@@ -8,6 +8,7 @@ import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 
 export default function Contact() {
+    
     const [ref, visible] = useInView({ triggerOnce: true });
     const [style, setStyle] = useState("invisible mt-14 mx-5");
 

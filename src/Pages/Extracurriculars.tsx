@@ -79,7 +79,7 @@ function setValues(ecs: Extracurricular[], search: string) {
 }
 
 export default function Extracurriculars() {
-
+    
     const [search, setSearch] = useState("");
     const [filteredClubs, setFilteredClubs] = useState(clubs);
     const [filteredCouncils, setFilteredCouncils] = useState(councils);
