@@ -37,13 +37,13 @@ function ecToString(ec: Extracurricular) {
         teacherAdvisors, contactInformation, presidents } = ec;
     
     // cleaning data
-    let cleanName = cleanString(name);
-    let cleanFrequency = cleanString(frequency);
-    let cleanBiography = cleanString(biography ?? "");
-    let cleanLocation = cleanString(location ?? "");
-    let cleanTeacherAdvisors = cleanString(teacherAdvisors?.join(" ") ?? "");
-    let cleanContactInformation = cleanString(contactInformation?.join(" ") ?? "");
-    let cleanPresidents = cleanString(presidents?.join(" ") ?? "");
+    const cleanName = cleanString(name);
+    const cleanFrequency = cleanString(frequency);
+    const cleanBiography = cleanString(biography ?? "");
+    const cleanLocation = cleanString(location ?? "");
+    const cleanTeacherAdvisors = cleanString(teacherAdvisors?.join(" ") ?? "");
+    const cleanContactInformation = cleanString(contactInformation?.join(" ") ?? "");
+    const cleanPresidents = cleanString(presidents?.join(" ") ?? "");
     
     result += cleanName ? cleanName + " " : "";
     result += cleanFrequency ? cleanFrequency + " " : "";
@@ -53,7 +53,7 @@ function ecToString(ec: Extracurricular) {
     result += cleanContactInformation ? cleanContactInformation + " " : "";
     result += cleanPresidents ? cleanPresidents + " " : "";
 
-    return result.trim();
+    return cleanString(result);
 }
 
 function resetValues(ecs: Extracurricular[]) {
@@ -63,14 +63,14 @@ function resetValues(ecs: Extracurricular[]) {
 }
 
 function setValues(ecs: Extracurricular[], search: string) {
-    if (search === "") {
+    const cleanedSearch = cleanString(search);
+    if (cleanedSearch === "") {
         resetValues(ecs);
         return ecs;
     }
 
-    let updated = ecs.map((ec) => {
+    const updated = ecs.map((ec) => {
         const cleanedEc = cleanString(ecToString(ec));
-        const cleanedSearch = cleanString(search);
 
         return { ...ec, value: cleanedEc.includes(cleanedSearch) ? 1 : 0 };
     });
@@ -103,6 +103,7 @@ export default function Extracurriculars() {
                     className="w-full bg-transparent rounded-xl text-lg px-3 py-1 border-2 border-border-light-yellow"
                     onChange={handleChange}
                     value={search}
+                    autoFocus
                 />
             </div>
 
