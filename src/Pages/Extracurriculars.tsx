@@ -84,13 +84,31 @@ export default function Extracurriculars() {
     const [filteredClubs, setFilteredClubs] = useState(clubs);
     const [filteredCouncils, setFilteredCouncils] = useState(councils);
 
+    function updateFilter(search: string) {
+        setFilteredClubs((c) => setValues(c, search));
+        setFilteredCouncils((c) => setValues(c, search));
+    }
+
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
         setSearch(() => e.target.value);
     }
 
+    function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+        if (e.key === 'Backspace') {
+            const target = e.target as HTMLInputElement;
+            
+            // check if input is highlighted (such as via ctrl + a)
+            if (target.selectionStart === 0 && target.selectionEnd === search.length) {
+                setSearch(() => "");
+
+                // since react bundles state updates, manually pass in ""
+                updateFilter("")
+            }
+        }
+    }
+
     useEffect(() => {
-        setFilteredClubs((c) => setValues(c, search));
-        setFilteredCouncils((c) => setValues(c, search));
+        updateFilter(search)
     }, [search]);
 
     return (
@@ -99,11 +117,12 @@ export default function Extracurriculars() {
 
             <div className="mt-14 px-3 md:px-12">
                 <input
+                    autoFocus
                     placeholder="Search for a club or council..."
                     className="w-full bg-transparent rounded-xl text-lg px-3 py-1 border-2 border-border-light-yellow"
-                    onChange={handleChange}
+                    onChange={(e) => handleChange(e)}
                     value={search}
-                    autoFocus
+                    onKeyDown={(e) => handleKeyDown(e)}
                 />
             </div>
 
