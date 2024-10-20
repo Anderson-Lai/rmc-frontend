@@ -53,7 +53,7 @@ function ecToString(ec: Extracurricular) {
     result += cleanContactInformation ? cleanContactInformation + " " : "";
     result += cleanPresidents ? cleanPresidents + " " : "";
 
-    return cleanString(result);
+    return result.trim();
 }
 
 function resetValues(ecs: Extracurricular[]) {
