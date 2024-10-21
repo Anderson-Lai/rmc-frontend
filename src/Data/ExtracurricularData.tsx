@@ -280,7 +280,7 @@ export const clubs: Extracurricular[] = [
         contactInformation: ["IG: @str.finance", "YT:@STRFinance"],
     },
     {
-        name: "Ram's Media Club (RMC)",
+        name: "Rams Media Club (RMC)",
         frequency: "Find more info on Instagram/Discord",
         value: 1,
         biography: "Lights, camera, action! Are you interested in film, photography, VFX, and more? Do you want to contribute to your school community and leave a lasting impression at St. Robert? RMC, also known as the Rams Media Club, aims to amplify student voices through creative mediums. Join the Media Club today!",
