@@ -121,7 +121,7 @@ export default function Extracurriculars() {
                 <input
                     autoFocus
                     placeholder="Search for a club or council..."
-                    className="w-full bg-transparent rounded-xl text-lg px-3 py-1 border-2 border-border-light-yellow"
+                    className="w-full bg-transparent rounded-xl text-lg px-3 py-1 border-2 border-border-light-yellow outline-none"
                     onChange={(e) => handleChange(e)}
                     value={search}
                     onKeyDown={(e) => handleKeyDown(e)}
