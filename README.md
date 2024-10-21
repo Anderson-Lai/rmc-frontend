@@ -21,4 +21,4 @@ npm run dev
 
 If you find any issues, please either contact me via email at andersonmhlai26@gmail.com or submit a pull request fixing the issue.  
 
-If the pull request solves the issue and does not introduce any new issues, it will be merged and pushed to production
+If the pull request solves the issue and does not introduce any new issues, it will be merged and pushed to production.
