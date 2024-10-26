@@ -272,11 +272,11 @@ export const clubs: Extracurricular[] = [
     },
     {
         name: "STR Finance",
-        frequency: "Thursday weekly",
+        frequency: "Tuesday biweekly",
         value: 1,
         biography: "Empowering and educating students on various financial topics! Join us and learn about financial literacy, investments, and more!",
-        location: "P08",
-        teacherAdvisors: ["E. Nagy-Bakos"],
+        location: "Room 144 (tentatively)",
+        teacherAdvisors: ["C. Cusimano"],
         contactInformation: ["IG: @str.finance", "YT:@STRFinance"],
     },
     {
