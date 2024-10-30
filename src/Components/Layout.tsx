@@ -12,7 +12,7 @@ type LayoutProps = {
 
 export default function Layout( { children } : LayoutProps ) {
     return (
-        <div className="flex flex-col min-h-screen justify-between from-bg-dark-green to-bg-black bg-gradient-to-t">
+        <div className="flex flex-col min-h-screen justify-between from-bg-black to-bg-dark-green bg-gradient-to-b">
             <div className="flex flex-col">
                 <header className="text-text-light-green flex justify-between items-center px-4 py-3 mb-5 mt-10 max-h-fit">
 
