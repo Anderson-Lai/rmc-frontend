@@ -23,6 +23,10 @@ export const links: NavbarLink[] = [
         title: "Announcements",
         link: "/announcements"
     },
+    {
+        title: "Showreel",
+        link: "/showreel"
+    }
     // {
     //     title: "Contact",
     //     link: "/contact"

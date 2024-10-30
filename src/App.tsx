@@ -6,6 +6,7 @@ import Extracurriculars from "./Pages/Extracurriculars"
 import Announcements from "./Pages/Announcements"
 import Contact from "./Pages/Contact"
 import { Analytics } from '@vercel/analytics/react'
+import Showreel from "./Pages/Showreel"
 
 export default function App() {
   return (
@@ -13,11 +14,12 @@ export default function App() {
       <Analytics />
       <Layout>
         <Routes>
-          <Route index path="/" element={<Home />} />
-          <Route index path="/resources" element={<Resources />} />
-          <Route index path="/extracurriculars" element={<Extracurriculars />} />
-          <Route index path="/announcements" element={<Announcements />} />
-          <Route index path="/contact" element={<Contact />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/extracurriculars" element={<Extracurriculars />} />
+          <Route path="/announcements" element={<Announcements />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/showreel" element={<Showreel />} />
         </Routes>
       </Layout>
     </BrowserRouter>
