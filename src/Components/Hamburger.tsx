@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import x from '../assets/x-img.svg'
+import x from '../Images/x-img.svg'
 import { v4 } from "uuid";
 import type { HamburgerLink } from "../Data/LayoutData";
 

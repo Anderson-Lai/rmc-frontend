@@ -1,7 +1,7 @@
 import { ReactElement } from "react"
 import { Link } from "react-router-dom";
 import { links, hamburgerLinks} from "../Data/LayoutData";
-import logo from '../assets/logo.png';
+import logo from '../Images/logo.png';
 import Logo from "../Components/Logo";
 import Hamburger from "./Hamburger";
 import { v4 } from "uuid";

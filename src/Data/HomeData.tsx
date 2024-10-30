@@ -1,6 +1,6 @@
-import purpose from '../assets/purpose.png';
-import goals from '../assets/goals.png';
-import announce from '../assets/announcements.png';
+import purpose from '../Images/purpose.png';
+import goals from '../Images/goals.png';
+import announce from '../Images/announcements.png';
 import type { CardProps } from '../Components/Card';
 
 export const cardData : CardProps[] = [
