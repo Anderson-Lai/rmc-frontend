@@ -23,7 +23,7 @@ export default function ShowreelCard( { media, title, description, author, align
 
         if (videoExtensions.includes(extension)) {
             setMediaElement(() => 
-                <video controls className="max-w-[650px] w-full">
+                <video loop muted controls className="max-h-[350px] w-auto">
                     <source src={media} type={`video/${extension}`} />
                     Your browser does not support this type of content
                 </video>
@@ -31,9 +31,7 @@ export default function ShowreelCard( { media, title, description, author, align
         }
         else if (imageExtensions.includes(extension)) {
             setMediaElement(() =>
-                <img src={media}>
-
-                </img>
+                <img src={media} className="max-h-[350px] w-auto" />
             )
         }
     }, []);
@@ -41,18 +39,18 @@ export default function ShowreelCard( { media, title, description, author, align
     const text = 
         <div className="flex flex-col justify-center items-center my-5 text-center">
             <h3 className="text-3xl mb-3 font-semibold">{title}</h3>
-            <p className="text-xl">{description}</p>
+            <p className="text-lg md:text-xl">{description}</p>
             <p className="text-lg italic mt-2">By: {author}</p>
         </div>
 
     return (
-        alignVideo == "left" ?
-            <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-x-28">
+        alignVideo === "left" ?
+            <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-x-28">
                 {mediaElement}
                 {text}
             </div>
         :
-            <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-x-28">
+            <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-x-28">
                 {text}
                 {mediaElement}
             </div>
