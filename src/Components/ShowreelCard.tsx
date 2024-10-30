@@ -39,9 +39,9 @@ export default function ShowreelCard( { media, title, description, author, align
     }, []);
 
     const text = 
-        <div className="flex flex-col justify-center items-center my-5">
+        <div className="flex flex-col justify-center items-center my-5 text-center">
             <h3 className="text-3xl mb-3 font-semibold">{title}</h3>
-            <p className="text-xl text-center">{description}</p>
+            <p className="text-xl">{description}</p>
             <p className="text-lg italic mt-2">By: {author}</p>
         </div>
 
