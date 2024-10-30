@@ -23,6 +23,6 @@ export const showreelElements: ShowreelCardProps[] = [
         title: "Some Random Title",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatibus aliquid blanditiis officiis quos, non voluptatem quis aperiam, accusamus optio voluptates deleniti commodi. Ducimus atque laboriosam modi. Eos, assumenda! Quae.",
         author: "Anderson Lai",
-        alignVideo: "right"
+        alignVideo: "left"
     }
 ]
