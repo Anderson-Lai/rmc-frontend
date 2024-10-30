@@ -1,5 +1,4 @@
 
-
 export const generalData = {
     edsembli: {
         title: "Edsembli",
