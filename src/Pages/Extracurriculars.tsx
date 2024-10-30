@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import ExtracurricularCard from "../Components/ExtracurricularCard";
 import PageTitle from "../Components/PageTitle";
-import { clubs, councils, Extracurricular } from "../Data/ExtracurricularData";
+import { clubs, councils } from "../Data/ExtracurricularData";
+import type { ExtracurricularProps } from "../Components/ExtracurricularCard";
 import { v4 } from "uuid";
 
 function isAlphaNumeric(string: string) {
@@ -31,7 +32,7 @@ function cleanString(string: string) {
     return cleaned.trim().toLowerCase();
 }
 
-function ecToString(ec: Extracurricular) {
+function ecToString(ec: ExtracurricularProps) {
     let result = "";
     const { name, frequency, biography, location, 
         teacherAdvisors, contactInformation, presidents } = ec;
@@ -56,13 +57,13 @@ function ecToString(ec: Extracurricular) {
     return result.trim();
 }
 
-function resetValues(ecs: Extracurricular[]) {
+function resetValues(ecs: ExtracurricularProps[]) {
     for (let i = 0; i < ecs.length; i++) {
         ecs[i].value = 1;
     }
 }
 
-function setValues(ecs: Extracurricular[], search: string) {
+function setValues(ecs: ExtracurricularProps[], search: string) {
     const cleanedSearch = cleanString(search);
     if (cleanedSearch === "") {
         resetValues(ecs);
