@@ -7,11 +7,13 @@ import Announcements from "./Pages/Announcements"
 import Contact from "./Pages/Contact"
 import { Analytics } from '@vercel/analytics/react'
 import Showreel from "./Pages/Showreel"
+import SmoothScroll from "./Components/SmoothScroll"
 
 export default function App() {
   return (
     <BrowserRouter>
       <Analytics />
+      <SmoothScroll />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
