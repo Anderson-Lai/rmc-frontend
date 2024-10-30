@@ -1,10 +1,10 @@
 // deprecated
 
-import type { Props } from "../Components/ContactCard";
+import type { Contact } from "../Components/ContactCard";
 import { FaInstagram } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 
-export const contacts: Props[] = [
+export const contacts: Contact[] = [
     {
         name: "by email",
         value: "strobsmedia@gmail.com",

@@ -1,17 +1,6 @@
+import type { ExtracurricularProps } from "../Components/ExtracurricularCard";
 
-
-export type Extracurricular = {
-    name: string,
-    frequency: string,
-    value: number,
-    biography?: string,
-    location?: string,
-    teacherAdvisors?: string[],
-    contactInformation?: string[],
-    presidents?: string[],
-}
-
-export const clubs: Extracurricular[] = [
+export const clubs: ExtracurricularProps[] = [
     {
         name: "AXIOM Newspaper",
         frequency: "Tuesday biweekly",
@@ -350,7 +339,7 @@ export const clubs: Extracurricular[] = [
     }
 ].sort((first, second) => first.name.localeCompare(second.name));
 
-export const councils: Extracurricular[] = [
+export const councils: ExtracurricularProps[] = [
     {
         name: "Arts Council",
         frequency: "Monday weekly from 2:30 to 3:30",

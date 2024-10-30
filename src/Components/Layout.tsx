@@ -6,11 +6,11 @@ import Logo from "../Components/Logo";
 import Hamburger from "./Hamburger";
 import { v4 } from "uuid";
 
-type Props = {
+type LayoutProps = {
     children: ReactElement
 }
 
-export default function Layout( { children } : Props ) {
+export default function Layout( { children } : LayoutProps ) {
     return (
         <div className="flex flex-col min-h-screen justify-between from-bg-dark-green to-bg-black bg-gradient-to-t">
             <div className="flex flex-col">

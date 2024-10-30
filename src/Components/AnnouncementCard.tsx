@@ -1,13 +1,13 @@
 import { ReactNode, useRef } from "react";
 import { motion } from "framer-motion";
 
-type Props = {
+type AnnouncementProps = {
     title: string,
     link: string,
     embed?: ReactNode
 }
 
-export default function AnnouncementCard( { title, link, embed} : Props ) {
+export default function AnnouncementCard( { title, link, embed} : AnnouncementProps ) {
 
     const button = useRef<HTMLButtonElement | null>(null);
 

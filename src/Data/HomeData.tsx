@@ -1,9 +1,9 @@
 import purpose from '../assets/purpose.png';
 import goals from '../assets/goals.png';
 import announce from '../assets/announcements.png';
-import type { Props } from '../Components/Card';
+import type { CardProps } from '../Components/Card';
 
-export const cardData : Props[] = [
+export const cardData : CardProps[] = [
     {
         title: "Our Purpose",
         image: purpose,

@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
-type Props = {
+type TypewriterProps = {
     message: string,
     className: string,
     characterDelay?: number
 }
 
-export default function TypewriterEffect({ message, className, characterDelay = 55 } : Props) {
+export default function TypewriterEffect({ message, className, characterDelay = 55 } : TypewriterProps) {
 
     const [ref, visible] = useInView({ triggerOnce: true });
 

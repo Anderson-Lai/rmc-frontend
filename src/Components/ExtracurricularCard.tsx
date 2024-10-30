@@ -1,7 +1,18 @@
-import type { Extracurricular } from "../Data/ExtracurricularData";
+
+
+export type ExtracurricularProps = {
+    name: string,
+    frequency: string,
+    value: number,
+    biography?: string,
+    location?: string,
+    teacherAdvisors?: string[],
+    contactInformation?: string[],
+    presidents?: string[],
+}
 
 export default function ExtracurricularCard( { name, frequency, biography, location, teacherAdvisors,
-    contactInformation, presidents } : Extracurricular ) {
+    contactInformation, presidents } : ExtracurricularProps ) {
 
     return (
         <div className="border border-border-light-yellow rounded-lg

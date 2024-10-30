@@ -5,11 +5,11 @@ import x from '../assets/x-img.svg'
 import { v4 } from "uuid";
 import type { HamburgerLink } from "../Data/LayoutData";
 
-type Props = {
+type HamburgerProps = {
     links: HamburgerLink[],
 }
 
-export default function Hamburger( { links } : Props ) {
+export default function Hamburger( { links } : HamburgerProps ) {
 
     const menu = useRef<HTMLDivElement | null>(null);
 

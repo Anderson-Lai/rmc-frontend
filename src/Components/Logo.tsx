@@ -1,11 +1,11 @@
 
 
-type Props = {
+type LogoProps = {
     logo: string
     invisible?: boolean
 }
 
-export default function Logo( { logo, invisible } : Props ) {
+export default function Logo( { logo, invisible } : LogoProps ) {
     return (
         invisible ?
             <div className="max-w-10 md:w-14 lg:w-32 mx-2 flex justify-center items-start invisible" >

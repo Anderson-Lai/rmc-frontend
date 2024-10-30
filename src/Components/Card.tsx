@@ -1,6 +1,6 @@
 
 
-export type Props = {
+export type CardProps = {
     image?: string,
     title: string,
     body: string,
@@ -8,7 +8,7 @@ export type Props = {
     noopen?: boolean
 }
 
-export default function Card( { image, title, body, link, noopen } : Props ) {
+export default function Card( { image, title, body, link, noopen } : CardProps ) {
 
     function handleClick() {
         if (link && !noopen) {
