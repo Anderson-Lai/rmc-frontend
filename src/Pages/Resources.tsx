@@ -3,7 +3,6 @@ import PageTitle from "../Components/PageTitle";
 import { generalData, guidanceData } from "../Data/ResourcesData";
 import { v4 } from 'uuid';
 
-
 export default function Resources() {
     return (
         <>
