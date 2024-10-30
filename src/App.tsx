@@ -6,11 +6,13 @@ import Extracurriculars from "./Pages/Extracurriculars"
 import Announcements from "./Pages/Announcements"
 import Contact from "./Pages/Contact"
 import { Analytics } from '@vercel/analytics/react'
+import SmoothScroll from "./Components/SmoothScroll"
 
 export default function App() {
   return (
     <BrowserRouter>
       <Analytics />
+      <SmoothScroll />
       <Layout>
         <Routes>
           <Route index path="/" element={<Home />} />
