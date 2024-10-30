@@ -1,12 +1,12 @@
 import { IconType } from "react-icons";
 import { FaEnvelope, FaInstagram } from "react-icons/fa";
 
-type HeaderLink = {
+type NavbarLink = {
     title: string,
     link: string
 }
 
-export const links: HeaderLink[] = [
+export const links: NavbarLink[] = [
     {
         title: "Home",
         link: "/"
@@ -29,7 +29,7 @@ export const links: HeaderLink[] = [
     // }
 ];
 
-export type HamburgerLink = HeaderLink & {
+export type HamburgerLink = NavbarLink & {
     Image?: IconType,
     target?: string
 };
