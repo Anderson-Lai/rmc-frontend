@@ -50,8 +50,8 @@ export default function Hamburger( { links } : HamburgerProps ) {
                     transition={{ delay: 0, duration: 0.3, ease: "easeOut" }}
                     className="fixed top-0 right-0 w-[325px] h-screen bg-bg-black py-10 z-20"
                 >
-                    <div className="w-full flex justify-end cursor-pointer">
-                        <img src={x} onClick={toggleMenu} className="mx-7" />
+                    <div className="w-full flex justify-end">
+                        <img src={x} onClick={toggleMenu} className="cursor-pointer mx-7" />
                     </div>
                     <div className="flex flex-col">
                         {
