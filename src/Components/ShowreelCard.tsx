@@ -5,13 +5,13 @@ export type ShowreelCardProps = {
     title?: string,
     description?: string,
     author: string
-    alignMedia: "left" | "right"
+    alignMedia?: "left" | "right"
 }
 
 const videoExtensions = ["mp4", "avi", "mov", "wmv", "mkv", "flv", "webm", "mpeg", "mpg", "3gp", "m4v", "f4v"];
 const imageExtensions = ["jpg", "jpeg", "png", "gif", "bmp", "tiff", "tif", "webp", "svg", "heic", "heif", "raw", "ico", "psd", "ai"];
 
-export default function ShowreelCard( { media, title, description, author, alignMedia } : ShowreelCardProps ) {
+export default function ShowreelCard( { media, title, description, author, alignMedia = "left" } : ShowreelCardProps ) {
     
     const [mediaElement, setMediaElement] = useState<ReactElement | null>(null);
 
@@ -23,7 +23,7 @@ export default function ShowreelCard( { media, title, description, author, align
 
         if (videoExtensions.includes(extension)) {
             setMediaElement(() => 
-                <video loop muted controls className="max-h-[400px] w-auto">
+                <video controls className="max-h-[325px] w-auto">
                     <source src={media} type={`video/${extension}`} />
                     Your browser does not support this type of content
                 </video>
@@ -31,7 +31,7 @@ export default function ShowreelCard( { media, title, description, author, align
         }
         else if (imageExtensions.includes(extension)) {
             setMediaElement(() =>
-                <img src={media} className="max-h-[400px] w-auto" />
+                <img src={media} className="max-h-[325px] w-auto" />
             )
         }
     }, []);
@@ -50,7 +50,7 @@ export default function ShowreelCard( { media, title, description, author, align
         </div>
 
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-x-28">
+        <div className="flex flex-col items-center justify-center">
             {
                 alignMedia === "left" ?
                 <>

@@ -76,10 +76,10 @@ export default function Showreel() {
             </div>
 
             {/* carousel */}
-            <div className="mt-12 mx-5 lg:mx-24 flex justify-center items-center space-x-1 md:space-x-16 h-[400px]">
+            <div className="mt-12 mx-5 lg:mx-24 flex justify-center items-center space-x-1 h-[400px]">
                 <ArrowButton direction="decrement" />
 
-                <div className="max-h-[400px] overflow-y-auto px-4 w-full">
+                <div className="max-h-[400px] overflow-y-auto px-4 w-full md:w-[80%] lg:w-[55%]">
                     <AnimatePresence mode="wait">
                         <motion.div key={selected}
                             initial={{ opacity: 0 }}

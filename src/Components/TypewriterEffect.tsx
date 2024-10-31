@@ -7,7 +7,7 @@ type TypewriterProps = {
     characterDelay?: number
 }
 
-export default function TypewriterEffect({ message, className, characterDelay = 55 } : TypewriterProps) {
+export default function TypewriterEffect( { message, className, characterDelay = 55 } : TypewriterProps) {
 
     const [ref, visible] = useInView({ triggerOnce: true });
 
