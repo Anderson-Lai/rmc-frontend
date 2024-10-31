@@ -65,7 +65,7 @@ export default function Showreel() {
                     </p>
                 </div>
 
-                <div className="max-h-[400px] overflow-scroll px-4 w-full">
+                <div className="max-h-[400px] overflow-y-scroll px-4 w-full">
                     <AnimatePresence mode="wait">
                         <motion.div key={selected}
                             initial={{ opacity: 0 }}
