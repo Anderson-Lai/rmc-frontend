@@ -10,13 +10,14 @@ export type ContactCardProps = {
 }
 
 export default function ContactCard( { name, value, Icon, delay } : ContactCardProps ) {
+    
     const button = useRef<HTMLButtonElement | null>(null);
 
     async function handleClick() {
         await window.navigator.clipboard.writeText(value);
         button.current!.textContent = "Copied!";
     }
-    
+
     function handleMouseOut() {
         setTimeout(() => {
             button.current!.textContent = "Copy";

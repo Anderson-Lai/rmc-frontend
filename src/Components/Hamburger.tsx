@@ -16,27 +16,29 @@ export default function Hamburger( { links } : HamburgerProps ) {
     const [render, setRender] = useState(false);
     const [style, setStyle] = useState("fixed top-0 left-0 z-[-10] h-screen w-screen");
 
-    function toggleMenu() {
-        setRender(curr => !curr);
+    function showMenu() {
+        if (!render) {
+            setRender(() => true)
+        }
+    }
+    
+    function hideMenu() {
+        if (render) {
+            setRender(() => false);
+        }
     }
 
     function handleClick(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
         e.stopPropagation();
-        toggleMenu();
-    }
-
-    function hideMenu() {
-        if (render) {
-            setRender(curr => !curr);
-        }
+        showMenu();
     }
 
     useEffect(() => {
-        if (!render) {
-            setStyle(() => "fixed top-0 left-0 z-[-10] h-screen w-screen")
+        if (render) {
+            setStyle(() => "fixed top-0 left-0 z-10 h-screen w-screen");
         }
         else {
-            setStyle(() => "fixed top-0 left-0 z-10 h-screen w-screen")
+            setStyle(() => "fixed top-0 left-0 z-[-10] h-screen w-screen");
         }
     }, [render]);
 
@@ -50,9 +52,12 @@ export default function Hamburger( { links } : HamburgerProps ) {
                     transition={{ delay: 0, duration: 0.3, ease: "easeOut" }}
                     className="fixed top-0 right-0 w-[325px] h-screen bg-bg-black py-10 z-20"
                 >
+                    {/* close button */}
                     <div className="w-full flex justify-end">
-                        <img src={x} onClick={toggleMenu} className="cursor-pointer mx-7" />
+                        <img src={x} onClick={hideMenu} className="cursor-pointer mx-7" />
                     </div>
+
+                    {/* content */}
                     <div className="flex flex-col">
                         {
                             links.map(link => {
