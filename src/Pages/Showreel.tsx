@@ -37,17 +37,22 @@ export default function Showreel() {
 
     return (
         <>
-            <div className="mb-24">
-                <PageTitle title="SHOWREEL" />
-            </div>
+            <PageTitle title="SHOWREEL" />
         
-            <Header heading="Media of the Month" />
-            <div className="mt-12 mx-5 lg:mx-24">
-                <ShowreelCard {...mediaOfTheMonth} />
-            </div>
+            {
+                mediaOfTheMonth &&
+                <>
+                    <div className="mt-24 mb-12">
+                        <Header heading="Media of the Month" />
+                    </div>
+                    <div className="mx-5 lg:mx-24">
+                        <ShowreelCard {...mediaOfTheMonth} />
+                    </div>
+                </>
+            }
 
             <div className="mt-24">
-                <Header heading="Media By Your Executives" />
+                <Header heading="Exec Team's Showreel" />
             </div>
 
             <div className="mt-12 mx-5 lg:mx-24 flex justify-center items-center space-x-1 md:space-x-16 h-[400px]">
@@ -60,7 +65,7 @@ export default function Showreel() {
                     </p>
                 </div>
 
-                <div className="h-[400px] overflow-scroll px-4">
+                <div className="h-[400px] overflow-scroll px-4 w-full">
                     <AnimatePresence mode="wait">
                         <motion.div key={selected}
                             initial={{ opacity: 0 }}

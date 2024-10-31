@@ -2,16 +2,16 @@ import { ReactElement, useEffect, useState } from "react";
 
 export type ShowreelCardProps = {
     media: string,
-    title: string,
-    description: string,
+    title?: string,
+    description?: string,
     author: string
-    alignVideo: "left" | "right"
+    alignMedia: "left" | "right"
 }
 
 const videoExtensions = ["mp4", "avi", "mov", "wmv", "mkv", "flv", "webm", "mpeg", "mpg", "3gp", "m4v", "f4v"];
 const imageExtensions = ["jpg", "jpeg", "png", "gif", "bmp", "tiff", "tif", "webp", "svg", "heic", "heif", "raw", "ico", "psd", "ai"];
 
-export default function ShowreelCard( { media, title, description, author, alignVideo } : ShowreelCardProps ) {
+export default function ShowreelCard( { media, title, description, author, alignMedia } : ShowreelCardProps ) {
     
     const [mediaElement, setMediaElement] = useState<ReactElement | null>(null);
 
@@ -38,13 +38,19 @@ export default function ShowreelCard( { media, title, description, author, align
 
     const text = 
         <div className="flex flex-col justify-center items-center my-5 text-center">
-            <h3 className="text-3xl mb-3 font-semibold">{title}</h3>
-            <p className="text-lg md:text-xl">{description}</p>
-            <p className="text-lg italic mt-2">By: {author}</p>
+            {
+                title &&
+                <h3 className="text-xl md:text-3xl mb-3 font-semibold">{title}</h3>
+            }
+            {
+                description &&
+                <p className="text-lg md:text-xl">{description}</p>
+            }
+            <p className="text-base md:text-lg italic mt-2">By: {author}</p>
         </div>
 
     return (
-        alignVideo === "left" ?
+        alignMedia === "left" ?
             <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-x-28">
                 {mediaElement}
                 {text}
