@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import { IconType } from "react-icons";
 
-export type Contact = {
+export type ContactCardProps = {
     name: string,
     value: string,
     Icon: IconType,
     delay?: number,
 }
 
-export default function ContactCard( { name, value, Icon, delay } : Contact ) {
+export default function ContactCard( { name, value, Icon, delay } : ContactCardProps ) {
     const button = useRef<HTMLButtonElement | null>(null);
 
     async function handleClick() {
