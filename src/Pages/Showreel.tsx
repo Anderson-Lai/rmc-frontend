@@ -75,6 +75,7 @@ export default function Showreel() {
                 <Header heading="Exec Team's Showreel" />
             </div>
 
+            {/* carousel */}
             <div className="mt-12 mx-5 lg:mx-24 flex justify-center items-center space-x-1 md:space-x-16 h-[400px]">
                 <ArrowButton direction="decrement" />
 

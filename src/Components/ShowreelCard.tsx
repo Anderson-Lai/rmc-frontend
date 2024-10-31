@@ -16,14 +16,14 @@ export default function ShowreelCard( { media, title, description, author, align
     const [mediaElement, setMediaElement] = useState<ReactElement | null>(null);
 
     useEffect(() => {
-        const extension = media.split(".").pop();
+        const extension = media.split(".").pop()?.toLowerCase();
         if (!extension) {
             return;
         }
 
         if (videoExtensions.includes(extension)) {
             setMediaElement(() => 
-                <video loop muted controls className="max-h-[350px] w-auto">
+                <video loop muted controls className="max-h-[400px] w-auto">
                     <source src={media} type={`video/${extension}`} />
                     Your browser does not support this type of content
                 </video>
@@ -31,7 +31,7 @@ export default function ShowreelCard( { media, title, description, author, align
         }
         else if (imageExtensions.includes(extension)) {
             setMediaElement(() =>
-                <img src={media} className="max-h-[350px] w-auto" />
+                <img src={media} className="max-h-[400px] w-auto" />
             )
         }
     }, []);
@@ -40,25 +40,29 @@ export default function ShowreelCard( { media, title, description, author, align
         <div className="flex flex-col justify-center items-center my-5 text-center">
             {
                 title &&
-                <h3 className="text-xl md:text-3xl mb-3 font-semibold">{title}</h3>
+                <h3 className="text-xl md:text-3xl font-semibold">{title}</h3>
             }
             {
                 description &&
-                <p className="text-lg md:text-xl">{description}</p>
+                <p className="text-lg md:text-xl mt-2">{description}</p>
             }
-            <p className="text-base md:text-lg italic mt-2">By: {author}</p>
+            <p className="text-base md:text-lg italic mt-1">By: {author}</p>
         </div>
 
     return (
-        alignMedia === "left" ?
-            <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-x-28">
-                {mediaElement}
-                {text}
-            </div>
-        :
-            <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-x-28">
-                {text}
-                {mediaElement}
-            </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-x-28">
+            {
+                alignMedia === "left" ?
+                <>
+                    {mediaElement}
+                    {text}
+                </>
+                    :
+                <>
+                    {text}
+                    {mediaElement}
+                </>
+            }
+        </div>
     );
 }
