@@ -53,8 +53,9 @@ export default function Home() {
                 <p className="text-center my-9 w-[90%] lg:w-[50%]">{appDescription}</p>
 
                 <button className="mt-4 text-lg rounded-xl border-2 border-border-light-yellow px-5 py-2
-                 hover:-translate-y-2 duration-150 delay-75 hover:shadow-button-white"
-                 onClick={handleDownload}>
+                    hover:-translate-y-2 duration-150 delay-75 hover:shadow-button-white"
+                    onClick={handleDownload}
+                >
                     Download the App
                 </button>
             </div>

@@ -1,5 +1,5 @@
 import PageTitle from "../Components/PageTitle";
-import ShowreelCard, { ShowreelCardProps } from "../Components/ShowreelCard";
+import ShowreelCard from "../Components/ShowreelCard";
 import { showreelElements, mediaOfTheMonth } from "../Data/ShowreelData";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
@@ -16,9 +16,9 @@ export default function Showreel() {
 
     const [selected, setSelected] = useState(0);
 
-    function handleClick(elements: ShowreelCardProps[], mode: "increment" | "decrement") {
+    function handleClick(mode: "increment" | "decrement") {
         if (mode === "increment") {
-            if (selected + 1 >= elements.length) {
+            if (selected + 1 >= showreelElements.length) {
                 setSelected(() => 0)
             }
             else {
@@ -27,12 +27,32 @@ export default function Showreel() {
         }
         else {
             if (selected - 1 <= -1) {
-                setSelected(() => elements.length - 1);
+                setSelected(() => showreelElements.length - 1);
             }
             else {
                 setSelected((curr) => curr - 1);
             }
         }
+    }
+
+    type ArrowButtonProps = {
+        direction: "increment" | "decrement"
+    }
+
+    function ArrowButton( { direction } : ArrowButtonProps ) {
+        return (
+            <div 
+                className="bg-button-hover text-black text-3xl rounded-full p-2 
+                cursor-pointer hover:scale-110 duration-150 delay-75"
+                onClick={() => handleClick(direction === "increment" ? "increment" : "decrement")}
+            >
+                <p className="w-[25px] h-[25px] text-center flex items-center justify-center">
+                    {
+                        direction === "increment" ? ">" : "<" 
+                    }
+                </p>
+            </div>
+        );
     }
 
     return (
@@ -56,14 +76,7 @@ export default function Showreel() {
             </div>
 
             <div className="mt-12 mx-5 lg:mx-24 flex justify-center items-center space-x-1 md:space-x-16 h-[400px]">
-                <div className="bg-button-hover text-black text-3xl 
-                    rounded-full p-2 cursor-pointer"
-                    onClick={() => handleClick(showreelElements, "decrement")}
-                >
-                    <p className="w-[25px] h-[25px] text-center flex items-center justify-center">
-                        &#60;
-                    </p>
-                </div>
+                <ArrowButton direction="decrement" />
 
                 <div className="max-h-[400px] overflow-y-auto px-4 w-full">
                     <AnimatePresence mode="wait">
@@ -78,14 +91,7 @@ export default function Showreel() {
                     </AnimatePresence>
                 </div>
 
-                <div className="bg-button-hover text-black text-3xl 
-                    rounded-full p-2 cursor-pointer"
-                    onClick={() => handleClick(showreelElements, "increment")}
-                >
-                    <p className="w-[25px] h-[25px] text-center flex items-center justify-center">
-                        &#62;
-                    </p>
-                </div>
+                <ArrowButton direction="increment" />
             </div>
         </>
     );
