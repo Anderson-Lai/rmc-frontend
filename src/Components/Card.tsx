@@ -20,7 +20,7 @@ export default function Card( { image, title, body, link, noopen } : CardProps )
     }
 
     return (
-        <div className="border-2 border-border-light-yellow hover:shadow-small-white flex flex-col p-3
+        <div className="border-2 border-border-light-yellow hover:shadow-medium-white flex flex-col p-3
             my-4 rounded-xl hover:-translate-y-2 duration-150 delay-75" onClick={handleClick}>
             {
                 image &&

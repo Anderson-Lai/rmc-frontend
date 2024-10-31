@@ -18,8 +18,8 @@ export default {
         "title-family": "Montserrat"
       },
       boxShadow: {
-        "small-white": "0px 0px 10px 2px #FFFFFF",
-        "button-white": "0px 0px 7px 1px #FFFFFF"
+        "medium-white": "0px 0px 10px 2px #FFFFFF",
+        "small-white": "0px 0px 7px 1px #FFFFFF"
       }
     },
   },

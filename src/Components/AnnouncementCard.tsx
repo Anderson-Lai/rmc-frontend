@@ -16,7 +16,7 @@ export default function AnnouncementCard( { title, link, embed} : AnnouncementPr
     }
 
     return (
-        <div className="border-2 border-border-light-yellow rounded-xl hover:shadow-small-white
+        <div className="border-2 border-border-light-yellow rounded-xl hover:shadow-medium-white
             duration-150 delay-75 font-title-famil flex flex-col items-center 
             px-5 py-4 w-[85vw]"
         >
