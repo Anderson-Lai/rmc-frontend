@@ -16,7 +16,7 @@ export default function TypewriterEffect({ message, className, characterDelay = 
 
     useEffect(() => {
         const id = setInterval(() => {
-            if (!visible)
+            if (!visible || index >= message.length + 1)
                 return;
             setIndex(i => i + 1);
             setText(() => message.substring(0, index));
