@@ -76,10 +76,12 @@ export default function Showreel() {
             </div>
 
             {/* carousel */}
-            <div className="mt-12 mx-5 lg:mx-24 flex justify-center items-center space-x-1 h-[400px]">
-                <ArrowButton direction="decrement" />
+            <div className="mt-12 mx-5 lg:mx-24 flex justify-center items-center h-[400px]">
+                <div className="mb-10">
+                    <ArrowButton direction="decrement" />
+                </div>
 
-                <div className="max-h-[400px] overflow-y-auto px-4 w-full md:w-[80%] lg:w-[55%]">
+                <div className="max-h-[400px] overflow-y-auto px-4 w-full md:w-[85%] lg:w-[45%] flex justify-center">
                     <AnimatePresence mode="wait">
                         <motion.div key={selected}
                             initial={{ opacity: 0 }}
@@ -92,7 +94,9 @@ export default function Showreel() {
                     </AnimatePresence>
                 </div>
 
-                <ArrowButton direction="increment" />
+                <div className="mb-10">
+                    <ArrowButton direction="increment" />
+                </div>
             </div>
         </>
     );
