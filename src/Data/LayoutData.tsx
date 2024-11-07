@@ -26,11 +26,11 @@ export const links: NavbarLink[] = [
     {
         title: "Showreel",
         link: "/showreel"
+    },
+    {
+        title: "Contact Us",
+        link: "/contact"
     }
-    // {
-    //     title: "Contact",
-    //     link: "/contact"
-    // }
 ];
 
 export type HamburgerLink = NavbarLink & {
