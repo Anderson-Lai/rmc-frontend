@@ -26,7 +26,7 @@ export const links: NavbarLink[] = [
     {
         title: "Showreel",
         link: "/showreel"
-    }
+    },
     // {
     //     title: "Contact",
     //     link: "/contact"
