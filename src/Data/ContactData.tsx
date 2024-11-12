@@ -1,5 +1,7 @@
 import type { ContactCardProps } from "../Components/ContactCard";
 
+const classroomCode = "bcausn2";
+const email = "strobsmedia@gmail.com";
 
 export const contacts: ContactCardProps[] = [
     {
@@ -10,14 +12,14 @@ export const contacts: ContactCardProps[] = [
     },
     {
         name: "Join our google classroom!",
-        displayedValue: "bcausn2",
+        displayedValue: classroomCode,
         action: "copy",
-        actionValue: "bcausn2"
+        actionValue: classroomCode
     },
     {
         name: "Contact us by email!",
-        displayedValue: "strobsmedia@gmail.com",
+        displayedValue: email,
         action: "copy",
-        actionValue: "strobsmedia@gmail.com",
+        actionValue: email,
     }
 ]
