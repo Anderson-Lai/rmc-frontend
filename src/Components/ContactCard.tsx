@@ -44,12 +44,13 @@ export default function ContactCard( { name, displayedValue, action, actionValue
 
             <hr className="border-white w-full" />
 
-            <p className="text-center text-lg mt-1">{displayedValue}</p>
+            <p className="text-center text-lg md:text-xl mt-1">{displayedValue}</p>
+
             <button 
                 ref={button} 
                 onClick={handleClick}
                 onMouseOut={handleMouseOut}
-                className="text-xl bg-bg-dark-green rounded-full p-3 py-[2px] mt-1 mb-2 hover:scale-105 duration-75"
+                className="text-lg bg-bg-dark-green rounded-full p-3 py-[2px] mt-1 mb-2 hover:scale-105 duration-75"
             >
                 {
                     action == "goto" ?
