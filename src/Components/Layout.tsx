@@ -15,12 +15,11 @@ export default function Layout( { children } : LayoutProps ) {
         <div className="flex flex-col min-h-screen justify-between from-bg-black to-bg-dark-green bg-gradient-to-b">
             <div className="flex flex-col">
                 <header className="text-text-light-green flex justify-between items-center px-4 py-3 mb-5 mt-10 max-h-fit">
-
                     <div className="w-16 lg:w-20 flex justify-end items-center mx-5 md:mx-10">
                         <Logo logo={logo} />
                     </div>
 
-                    <nav className="hidden lg:flex h-fit place-items-center">
+                    <nav className="hidden lg:flex flex-wrap justify-center items-center h-fit max-w-[80%]">
                         {
                             links.map(link => {
                                 return (
