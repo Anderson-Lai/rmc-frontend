@@ -45,5 +45,5 @@ export const showreelElements: ShowreelCardProps[] = [
     {
         media: isaac_showreel_4,
         author: "Isaac Wong",
-    },
+    }
 ]

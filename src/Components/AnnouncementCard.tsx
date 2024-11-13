@@ -25,20 +25,16 @@ export default function AnnouncementCard( { title, link, embed} : AnnouncementPr
 
             {
                 embed !== undefined ? 
-                (
                     <div className="w-full h-[35vh] cursor-pointer">
                         {embed}
                     </div>
-                )
                 :
-                (
                     <div className="w-full">
                         <p className="text-center text-xl">
                             Sorry! The spreadsheet embed is currently unavailable.
                             Click below to view the spreadsheet normally.
                         </p>
                     </div>
-                )
             }
             <motion.button
                 ref={button}

@@ -5,13 +5,12 @@ export type ShowreelCardProps = {
     title?: string,
     description?: string,
     author: string
-    alignMedia?: "left" | "right"
 }
 
 const videoExtensions = ["mp4", "avi", "mov", "wmv", "mkv", "flv", "webm", "mpeg", "mpg", "3gp", "m4v", "f4v"];
 const imageExtensions = ["jpg", "jpeg", "png", "gif", "bmp", "tiff", "tif", "webp", "svg", "heic", "heif", "raw", "ico", "psd", "ai"];
 
-export default function ShowreelCard( { media, title, description, author, alignMedia = "left" } : ShowreelCardProps ) {
+export default function ShowreelCard( { media, title, description, author } : ShowreelCardProps ) {
     
     const [mediaElement, setMediaElement] = useState<ReactElement | null>(null);
 
@@ -36,33 +35,20 @@ export default function ShowreelCard( { media, title, description, author, align
         }
     }, []);
 
-    const text = 
-        <div className="flex flex-col justify-center items-center my-5 text-center">
-            {
-                title &&
-                <h3 className="text-xl md:text-3xl font-semibold">{title}</h3>
-            }
-            {
-                description &&
-                <p className="text-lg md:text-xl mt-2">{description}</p>
-            }
-            <p className="text-base md:text-lg italic mt-1">By: {author}</p>
-        </div>
-
     return (
         <div className="flex flex-col items-center justify-center">
-            {
-                alignMedia === "left" ?
-                <>
-                    {mediaElement}
-                    {text}
-                </>
-                    :
-                <>
-                    {text}
-                    {mediaElement}
-                </>
-            }
+            {mediaElement}
+            <div className="flex flex-col justify-center items-center my-5 text-center">
+                {
+                    title &&
+                    <h3 className="text-xl md:text-3xl font-semibold">{title}</h3>
+                }
+                {
+                    description &&
+                    <p className="text-lg md:text-xl mt-2">{description}</p>
+                }
+                <p className="text-base md:text-lg italic mt-1">By: {author}</p>
+            </div>
         </div>
     );
 }

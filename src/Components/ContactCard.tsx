@@ -54,13 +54,13 @@ export default function ContactCard( { name, displayedValue, action, actionValue
             >
                 {
                     action == "goto" ?
-                    <>
-                        Go
-                    </>
+                        <>
+                            Go
+                        </>
                     :
-                    <>
-                        Copy
-                    </>
+                        <>
+                            Copy
+                        </>
                 }
             </button>
         </motion.div>
