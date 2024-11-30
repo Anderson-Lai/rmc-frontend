@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import PageTitle from "../Components/PageTitle";
 import { motion } from "framer-motion";
+import { Oval } from "react-loader-spinner";
 
 type Form = {
     producerName: string,
@@ -45,7 +46,10 @@ export default function Form() {
     const [formData, setFormData] = useState(emptyForm);
     const [warning, setWarning] = useState("");
     const [emailWarning, setEmailWarning] = useState("");
-    // const [renderModal, setRenderModal] = useState(true);
+    const [renderLoader, setRenderLoader] = useState(false);
+
+    // used to grab the submit button
+    const submitButtonRef = useRef<HTMLButtonElement | null>(null);
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) {
         const { name , value } = e.target;
@@ -57,15 +61,18 @@ export default function Form() {
     }
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+        // prevent default page reloading
         e.preventDefault();
-        
+
         // send POST request to backend after validating form
         if (!isValidForm(formData)) {
             setWarning(() => "Please fill in all the form fields");
             return;
         }
         else if (!isValidEmail(formData.producerEmail)) {
-            setEmailWarning(() => "Please provide a valid @ycdsbk12.ca email");
+            const warning = "Please provide a valid @ycdsbk12.ca email";
+            setWarning(() => warning)
+            setEmailWarning(() => warning);
             return;
         }
 
@@ -73,15 +80,14 @@ export default function Form() {
         setWarning(() => "");
         setEmailWarning(() => "");
 
+        // disable the submit button
+        submitButtonRef.current!.disabled = true;
+        submitButtonRef.current!.className = "bg-gray-400 text-black py-1 px-2 rounded-lg text-xl cursor-not-allowed";
+
         // send the POST request to backend
         try {
-            // render alert to delay user whilst making request
-            window.alert("Thank you for submitting a pitch proposal form.");
-
-            // store form data
-            // sessionStorage.setItem("pitchFormData", JSON.stringify(formData));
-            // window.location.reload();
-            // setFormData(() => JSON.parse(sessionStorage.getItem("pitchFormData") as string));
+            // render alert to inform user form submission is happening
+            setRenderLoader(() => true);
 
             const errorMessage = "An error occurred while submitting your form data.";
 
@@ -106,13 +112,25 @@ export default function Form() {
                 throw new Error(errorMessage);
             }
 
-            // clear form
+            // remember to reset button
+            submitButtonRef.current!.disabled = false;
+            submitButtonRef.current!.className = "bg-border-light-yellow text-black py-1 px-2 rounded-lg text-xl cursor-pointer";
+
+            // reset page to original state
             setFormData(() => emptyForm);
+            setRenderLoader(() => false);
+
+            window.alert("Your pitch proposal submission was successful!")
         }
         catch (e) {
             window.alert(e);
-            return;
         }
+
+        // if an error is thrown, ensure to always unmount 
+        // the loader and reset button
+        setRenderLoader(() => false);
+        submitButtonRef.current!.disabled = false;
+        submitButtonRef.current!.className = "bg-border-light-yellow text-black py-1 px-2 rounded-lg text-xl cursor-pointer";
     }
 
     return (
@@ -163,12 +181,12 @@ export default function Form() {
                     />
 
                     <label htmlFor="eventSignificance" className="text-xl mb-2 mt-6">How is this event significant to the school?</label>
-                    <input 
-                        type="text" 
-                        className="bg-transparent border-2 border-border-light-yellow outline-none text-lg px-3 py-1 rounded-xl"
+                    <textarea
+                        className="bg-transparent border-2 border-border-light-yellow outline-none text-lg px-3 py-1 rounded-xl h-36"
                         name="eventSignificance"
                         value={formData.eventSignificance}
                         onChange={handleChange}
+                        placeholder="Provide a brief description on how this event is significant to our school."
                     />
 
                     <label htmlFor="eventPortrayal" className="text-xl mb-2 mt-6">How do you plan to showing this to our school community?</label>
@@ -195,14 +213,32 @@ export default function Form() {
                             warning &&
                             <p className="text-red-500 text-xl font-semibold mb-2">{warning}</p>
                         }
-                        <motion.button
-                            transition={{ duration: 0.1 }}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="bg-border-light-yellow text-black py-1 px-2 rounded-lg text-xl cursor-pointer"
-                        >
-                            Submit
-                        </motion.button>
+                        <div className="flex w-full justify-end items-center">
+                            {
+                                renderLoader &&
+                                <div className="mr-3">
+                                    <Oval 
+                                        visible={true}
+                                        color="#A9A9A9"
+                                        secondaryColor="#808080"
+                                        strokeWidth={5}
+                                        strokeWidthSecondary={5}
+                                        width={25}
+                                        height={25}
+                                    />
+                                </div>
+                            }
+
+                            <motion.button
+                                ref={submitButtonRef}
+                                transition={{ duration: 0.1 }}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="bg-border-light-yellow text-black py-1 px-2 rounded-lg text-xl cursor-pointer"
+                            >
+                                Submit
+                            </motion.button>
+                        </div>
                     </div>
                 </form>
             </div>
