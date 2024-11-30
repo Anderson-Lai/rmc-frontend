@@ -45,7 +45,7 @@ export default function ContactCard( { name, displayedValue, action, actionValue
             <motion.button ref={button}
                 onClick={handleClick}
                 className="text-lg bg-bg-dark-green rounded-full p-3 py-[2px] mt-1 mb-2"
-                whileHover={{ scale: 1.07 }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.075 }}
             >
