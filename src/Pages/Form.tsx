@@ -202,7 +202,10 @@ export default function Form() {
                         name="eventPortrayal"
                         value={formData.eventPortrayal}
                         onChange={handleChange}
-                        placeholder="Be specific: Will this be an interview style asking about their experiences, documentary style, trailer/event recap, informal vlog, cinematic, etc.?"
+                        placeholder={
+                            "Be specific: Will this be an interview style asking about their experiences, " +
+                            "documentary style, trailer/event recap, informal vlog, cinematic, etc.?" 
+                        }
                     />
 
                     <label htmlFor="mediaBreakdown" className="text-xl mb-2 mt-6">Please provide a rough breakdown</label>
