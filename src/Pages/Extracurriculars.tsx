@@ -32,6 +32,7 @@ function cleanString(string: string) {
     return cleaned.trim().toLowerCase();
 }
 
+// returns all of an ec's data as a single string
 function ecToString(ec: ExtracurricularProps) {
     let result = "";
     const { name, frequency, biography, location, 
@@ -63,16 +64,24 @@ function resetValues(ecs: ExtracurricularProps[]) {
     }
 }
 
+// main logic behind filtering
 function setValues(ecs: ExtracurricularProps[], search: string) {
+    // clean the input string, if it is empty, display all ecs
     const cleanedSearch = cleanString(search);
     if (cleanedSearch === "") {
+        // reset the "value" key to 1 for all ecs
         resetValues(ecs);
         return ecs;
     }
 
+    // update the filter
     const updated = ecs.map((ec) => {
+        // convert all of the ec's data into a single string
+        // and clean that string
         const cleanedEc = cleanString(ecToString(ec));
 
+        // check if the ec's "data string" contains the search's data, if yes, include it in
+        // the list of rendered ec's by keeping its "value" key at 1
         return { ...ec, value: cleanedEc.includes(cleanedSearch) ? 1 : 0 };
     });
 
@@ -85,12 +94,19 @@ export default function Extracurriculars() {
     const [filteredClubs, setFilteredClubs] = useState(clubs);
     const [filteredCouncils, setFilteredCouncils] = useState(councils);
 
+    // update the ec filter everytime the search <input /> changes
+    useEffect(() => {
+        updateFilter(search)
+    }, [search]);
+
     function updateFilter(inputValue: string) {
         setFilteredClubs((c) => setValues(c, inputValue));
         setFilteredCouncils((c) => setValues(c, inputValue));
     }
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+        // useEffect (view above) monitors the "search" variable, and
+        // updates the filter everytime it changes
         setSearch(() => e.target.value);
     }
 
@@ -110,10 +126,6 @@ export default function Extracurriculars() {
         }
     }
 
-    useEffect(() => {
-        updateFilter(search)
-    }, [search]);
-
     return (
         <>
             <PageTitle title="Clubs List" />
@@ -123,9 +135,12 @@ export default function Extracurriculars() {
                     autoFocus
                     placeholder="Search for a club or council..."
                     className="w-full bg-transparent rounded-xl text-lg px-3 py-1 border-2 border-border-light-yellow outline-none"
-                    onChange={(e) => handleChange(e)}
+                    onChange={handleChange}
+                    // onKeyDown is needed as pressing backspace after the entire
+                    // search is highlighted (such as through ctrl + a) is
+                    // not detected by onChange
+                    onKeyDown={handleKeyDown}
                     value={search}
-                    onKeyDown={(e) => handleKeyDown(e)}
                 />
             </div>
 
