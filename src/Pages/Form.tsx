@@ -123,7 +123,14 @@ export default function Form() {
             window.alert("Your pitch proposal submission was successful!")
         }
         catch (e) {
-            window.alert(e);
+            // in case the user switches off the tab
+            // before the form is done submitting, a TypeError
+            // arises from the usage of submitButtonRef
+            // however, the form data still goes through, so
+            // this error does not need to be shown to the user
+            if (!(e instanceof TypeError)) {
+                window.alert(e);
+            }
         }
 
         // if an error is thrown, ensure to always unmount 
