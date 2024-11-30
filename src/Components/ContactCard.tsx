@@ -19,14 +19,10 @@ export default function ContactCard( { name, displayedValue, action, actionValue
         }
         else if (action == "copy") {
             await window.navigator.clipboard.writeText(actionValue);
-        }
-    }
-
-    function handleMouseOut() {
-        if (action == "copy") {
+            button.current!.textContent = "Copied!";
             setTimeout(() => {
                 button.current!.textContent = "Copy";
-            }, 225);
+            }, 1000);
         }
     }
 
@@ -46,11 +42,12 @@ export default function ContactCard( { name, displayedValue, action, actionValue
 
             <p className="text-center text-lg md:text-xl mt-1">{displayedValue}</p>
 
-            <button 
-                ref={button} 
+            <motion.button ref={button}
                 onClick={handleClick}
-                onMouseOut={handleMouseOut}
-                className="text-lg bg-bg-dark-green rounded-full p-3 py-[2px] mt-1 mb-2 hover:scale-105 duration-75"
+                className="text-lg bg-bg-dark-green rounded-full p-3 py-[2px] mt-1 mb-2"
+                whileHover={{ scale: 1.07 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.075 }}
             >
                 {
                     action == "goto" ?
@@ -62,7 +59,7 @@ export default function ContactCard( { name, displayedValue, action, actionValue
                             Copy
                         </>
                 }
-            </button>
+            </motion.button>
         </motion.div>
     );
 }
