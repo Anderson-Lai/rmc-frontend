@@ -45,6 +45,7 @@ export default function Form() {
     const [formData, setFormData] = useState(emptyForm);
     const [warning, setWarning] = useState("");
     const [emailWarning, setEmailWarning] = useState("");
+    // const [renderModal, setRenderModal] = useState(true);
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) {
         const { name , value } = e.target;
@@ -74,6 +75,14 @@ export default function Form() {
 
         // send the POST request to backend
         try {
+            // render alert to delay user whilst making request
+            window.alert("Thank you for submitting a pitch proposal form.");
+
+            // store form data
+            // sessionStorage.setItem("pitchFormData", JSON.stringify(formData));
+            // window.location.reload();
+            // setFormData(() => JSON.parse(sessionStorage.getItem("pitchFormData") as string));
+
             const errorMessage = "An error occurred while submitting your form data.";
 
             // check if environment variable is set
@@ -97,9 +106,8 @@ export default function Form() {
                 throw new Error(errorMessage);
             }
 
-            // clear form and signal to user
+            // clear form
             setFormData(() => emptyForm);
-            window.alert("Thank you for submitting your pitch proposal form!");
         }
         catch (e) {
             window.alert(e);
@@ -165,7 +173,7 @@ export default function Form() {
 
                     <label htmlFor="eventPortrayal" className="text-xl mb-2 mt-6">How do you plan to showing this to our school community?</label>
                     <textarea
-                        className="bg-transparent border-2 border-border-light-yellow outline-none text-lg px-3 py-1 rounded-xl h-32"
+                        className="bg-transparent border-2 border-border-light-yellow outline-none text-lg px-3 py-1 rounded-xl h-36"
                         name="eventPortrayal"
                         value={formData.eventPortrayal}
                         onChange={handleChange}
@@ -175,7 +183,7 @@ export default function Form() {
 
                     <label htmlFor="mediaBreakdown" className="text-xl mb-2 mt-6">Please provide a rough breakdown</label>
                     <textarea
-                        className="bg-transparent border-2 border-border-light-yellow outline-none text-lg px-3 py-1 rounded-xl h-32"
+                        className="bg-transparent border-2 border-border-light-yellow outline-none text-lg px-3 py-1 rounded-xl h-36"
                         name="mediaBreakdown"
                         value={formData.mediaBreakdown}
                         onChange={handleChange}

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import x from '../Images/x-img.svg'
@@ -10,8 +10,6 @@ type HamburgerProps = {
 }
 
 export default function Hamburger( { links } : HamburgerProps ) {
-
-    const menu = useRef<HTMLDivElement | null>(null);
 
     const [render, setRender] = useState(false);
     const [style, setStyle] = useState("fixed top-0 left-0 z-[-10] h-screen w-screen");
@@ -46,7 +44,7 @@ export default function Hamburger( { links } : HamburgerProps ) {
         <>
             <div className="mx-2">
                 {/* slide in */}
-                <motion.div ref={menu}
+                <motion.div
                     initial={{ x: '325px' }}
                     animate={{ x: render ? 0 : '325px' }} 
                     transition={{ delay: 0, duration: 0.3, ease: "easeOut" }}
