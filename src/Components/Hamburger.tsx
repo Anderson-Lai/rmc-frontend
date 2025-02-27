@@ -70,7 +70,6 @@ export default function Hamburger( { links } : HamburgerProps ) {
 
                                         {
                                             link.Image &&
-
                                             <link.Image size={20} className="mx-4" />
                                         }
                                     </Link>
