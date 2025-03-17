@@ -99,13 +99,6 @@ export default function Form() {
 
             const endpoint = backendUrl + "/form";
         
-            // clean email address by removing all trailing and leading whitespace
-            setFormData(() => {
-                const email = formData["producerEmail"]
-                formData["producerEmail"] = email.trim();
-                return formData;
-            })
-            
             // send the POST request
             const response = await fetch(endpoint, {
                 method: "POST",
