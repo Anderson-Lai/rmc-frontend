@@ -196,7 +196,7 @@ export default function Form() {
                         placeholder="Provide a brief description on how this event is significant to our school."
                     />
 
-                    <label htmlFor="eventPortrayal" className="text-xl mb-2 mt-6">How do you plan to showing this to our school community?</label>
+                    <label htmlFor="eventPortrayal" className="text-xl mb-2 mt-6">How do you plan to show this to our school community?</label>
                     <textarea
                         className="bg-transparent border-2 border-border-light-yellow outline-none text-lg px-3 py-1 rounded-xl h-36"
                         name="eventPortrayal"
