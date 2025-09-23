@@ -17,10 +17,15 @@ export const generalData = {
         link: "https://app.myblueprint.ca/",
     },
     strWebsite: {
-        title: "St. Robert website",
+        title: "St. Robert Website",
         body: "Visit the main St. Robert website for the latest news, events, and resources for students and parents.",
         link: "https://stro.ycdsb.ca/",
     },
+    serviceHours: {
+        title: "Community Service Hours Form",
+        body: "Submit your community service hours forms.",
+        link: "https://docs.google.com/forms/d/e/1FAIpQLSfpP7PYmyT-mr17sZQxqww6KDsptDnuSb1yxig10Dc-WnAzZQ/viewform"
+    }
 }
 
 export const guidanceData = {

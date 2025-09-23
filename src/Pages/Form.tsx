@@ -3,6 +3,8 @@ import PageTitle from "../Components/PageTitle";
 import { motion } from "framer-motion";
 import { Oval } from "react-loader-spinner";
 
+const DISABLED = true;
+
 type Form = {
     producerName: string,
     producerEmail: string,
@@ -63,6 +65,12 @@ export default function Form() {
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         // prevent default page reloading
         e.preventDefault();
+
+        // if form is disabled, exit
+        if (DISABLED) {
+            window.alert("Sorry! The pitch proposal form is currently disabled. Email us at strobsmedia@gmail.com if you have any questions or concerns.");
+            return;
+        }
 
         // send POST request to backend after validating form
         if (!isValidForm(formData)) {
