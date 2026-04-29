@@ -1,3 +1,5 @@
+// pitch proposal form; indefinitely disabled
+
 import { useState, useRef } from "react";
 import PageTitle from "../Components/PageTitle";
 import { motion } from "framer-motion";

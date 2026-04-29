@@ -27,10 +27,10 @@ export const links: NavbarLink[] = [
         title: "Showreel",
         link: "/showreel"
     },
-    {
-        title: "Pitch Proposal Form",
-        link: "/form"
-    },
+    // {
+    //     title: "Pitch Proposal Form",
+    //     link: "/form"
+    // },
     {
         title: "Contact Us",
         link: "/contact"

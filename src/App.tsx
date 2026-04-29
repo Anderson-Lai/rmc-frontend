@@ -8,7 +8,7 @@ import Contact from "./Pages/Contact"
 import { Analytics } from '@vercel/analytics/react'
 import Showreel from "./Pages/Showreel"
 // import SmoothScroll from "./Components/SmoothScroll"
-import Form from "./Pages/Form"
+// import Form from "./Pages/Form"
 
 export default function App() {
   return (
@@ -22,7 +22,10 @@ export default function App() {
           <Route path="/extracurriculars" element={<Extracurriculars />} />
           <Route path="/announcements" element={<Announcements />} />
           <Route path="/showreel" element={<Showreel />} />
-          <Route path="/form" element={<Form />} />
+          {/* 
+            pitch proposal form; indefinitely disabled
+            <Route path="/form" element={<Form />} /> 
+          */}
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Layout>
