@@ -35,7 +35,7 @@ export default function Home() {
                 </Link>
             </div>
 
-            <div className="mt-14 mx-5 lg:mx-20 lg:block flex flex-col items-center">
+            <div className="mt-14 mb-80 mx-5 lg:mx-20 lg:block flex flex-col items-center">
                 <h3 className="font-semibold text-3xl mb-8">About Us</h3>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-x-7">
@@ -47,6 +47,7 @@ export default function Home() {
                 </div>
             </div>
             
+            {/* app no longer exists
             <div className="mt-28 mb-64 flex flex-col items-center">
                 <h2 className="font-bold text-center text-3xl">St. Robert CHS</h2>
                 <p className="text-center my-9 w-[90%] lg:w-[50%]">{appDescription}</p>
@@ -57,7 +58,8 @@ export default function Home() {
                 >
                     Download the App
                 </button>
-            </div>
+            </div> 
+            */}
         </>
     );
 }

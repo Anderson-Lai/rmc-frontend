@@ -22,9 +22,8 @@ export default function App() {
           <Route path="/extracurriculars" element={<Extracurriculars />} />
           <Route path="/announcements" element={<Announcements />} />
           <Route path="/showreel" element={<Showreel />} />
-          {/* 
-            pitch proposal form; indefinitely disabled
-            <Route path="/form" element={<Form />} /> 
+          {/* pitch proposal form; indefinitely disabled
+          <Route path="/form" element={<Form />} /> 
           */}
           <Route path="/contact" element={<Contact />} />
         </Routes>
