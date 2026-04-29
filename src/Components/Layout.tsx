@@ -11,6 +11,9 @@ type LayoutProps = {
 }
 
 export default function Layout( { children } : LayoutProps ) {
+
+    const year = new Date().getFullYear();
+
     return (
         <div className="flex flex-col min-h-screen justify-between from-bg-black to-bg-dark-green bg-gradient-to-b">
             <div className="flex flex-col">
@@ -50,7 +53,7 @@ export default function Layout( { children } : LayoutProps ) {
                 text-text-secondary py-2 mt-16"
             >
                 <p className="text-center">
-                    Copyright © 2024. All rights reserved. Rams Media Club.
+                    Copyright © {year}. All rights reserved. Rams Media Club.
                     {/* todo: | <a href="/privacy">Privacy Policy</a> | 
                     <a href="/tos">Terms Of Service</a> */}
                 </p>
