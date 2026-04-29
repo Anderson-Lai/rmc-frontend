@@ -1,25 +1,26 @@
 import { Link } from "react-router-dom";
 import Card from "../Components/Card";
-import { cardData, iosLink, googleLink, appDescription } from "../Data/HomeData";
+import { cardData } from "../Data/HomeData";
+// import { iosLink, googleLink, appDescription } from "../Data/HomeData"; 
 import { v4 } from "uuid";
 import TypewriterEffect from "../Components/TypewriterEffect";
 
 export default function Home() {
 
-    function isIos() {
-        return /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window as any).MSStream;
-    }   
+    // function isIos() {
+    //     return /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window as any).MSStream;
+    // }   
 
-    function handleDownload() {
-        const ios = isIos();
+    // function handleDownload() {
+    //     const ios = isIos();
         
-        if (ios) {
-            window.open(iosLink, "_blank", "noreferrer,noopener");
-        } 
-        else {
-            window.open(googleLink, "_blank", "noreferrer,noopener");
-        }
-    }
+    //     if (ios) {
+    //         window.open(iosLink, "_blank", "noreferrer,noopener");
+    //     } 
+    //     else {
+    //         window.open(googleLink, "_blank", "noreferrer,noopener");
+    //     }
+    // }
 
     return (
         <>
