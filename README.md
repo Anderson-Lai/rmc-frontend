@@ -20,6 +20,4 @@ npm run dev
 
 ## Features and Issues
 
-If you find any issues, please either contact me via email at andersonmhlai26@gmail.com or submit a pull request fixing the issue.  
-
-If the pull request solves the issue and does not introduce any new issues, it will be merged and pushed to production.
+Development now occurs [here.](https://github.com/rams-media-club/rmc-frontend.git)
